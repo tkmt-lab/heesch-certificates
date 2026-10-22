@@ -1,0 +1,30 @@
+{
+  "title": "Heesch numbers and maximal coronas of small polyforms with certificates and a Lean-verified SAT encoding",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "Article (version 2.1) with records, code and a Lean formalization. For a fixed selection of 3,964 shapes from Kaplan's tables of unmarked polyominoes, polyhexes and polyiamonds, every Heesch number Hc and Hh is given a corona witness (checked by two geometric checkers) and an upper-bound CNF whose unsatisfiability proof is accepted by drat-trim (5,019 proofs). A Lean 4 theorem proves the SAT encoding sound on the square, hexagonal and triangular grids (six statements, standard axioms, six kernel runs with five implementations), and a recorded finite comparison connects all 5,019 checked CNF files to the Lean definition; a second encoding agrees on every value. Maximal coronas of 22 shapes are counted by two implementations (complete agreement in 28 of 30 combinations), and a restricted search of 3,442 polyominoes with 20-28 cells yields no finite Hh=4 example. drat-trim and the file comparison are outside Lean; no human expert review. Text and data: CC BY 4.0; code: Apache 2.0.",
+  "creators": [
+    {
+      "name": "Tatsuhiko Takimoto",
+      "affiliation": "Independent researcher"
+    }
+  ],
+  "version": "1.0.0",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "Heesch number",
+    "polyforms",
+    "coronas",
+    "SAT",
+    "DRAT",
+    "Lean 4",
+    "formal verification"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/tkmt-lab/heesch-certificates",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

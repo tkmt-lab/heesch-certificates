@@ -1,0 +1,876 @@
+{
+ "version": "1.0.0",
+ "paper": {
+  "path": "paper-heesch-certificates-v2.1-en.tex",
+  "sha256": "4e4871d4976f10ac82ac1fd930a2a5abf9de6b2026f5ee118f8ded79d991af11",
+  "bytes": 79189
+ },
+ "pdf": {
+  "path": "paper-heesch-certificates-v2.1-en.pdf",
+  "sha256": "9d9d0b7ad78991916cf4e6f0d5ce04ab7c0330bf7aac5e16465945c0a27c6dbc",
+  "bytes": 175305
+ },
+ "kinds": {
+  "lean-proof": "checked by the Lean kernel (and external kernels via Comparator); standard axioms only",
+  "finite-computation": "checked by programs in this packet or recorded from finite computations; the programs are not formally verified",
+  "independent-implementation": "agreement of separately written implementations",
+  "prose": "argued in the article, not formalized"
+ },
+ "scope": {
+  "human_expert_review": false,
+  "lean_internal_unsat_proofs": false,
+  "lrat_or_verified_checker": false,
+  "off_grid_placements": false,
+  "exhaustive_beyond_listed_inputs": false,
+  "counting_formally_verified": false,
+  "inputs_redistributed": false,
+  "priority_claimed": false
+ },
+ "not_claimed": [
+  "Heesch values for shapes outside the listed selection (Table 3)",
+  "that Kaplan's files contain every non-tiler of each size (taken from his enumeration)",
+  "placements off the fixed grid",
+  "Lean-internal UNSAT proofs, LRAT, or a proof of the file comparison",
+  "formally verified counting; proof certificates for the outer completion counts",
+  "the 15-hex #315 totals from two implementations",
+  "that no polyomino has finite Hh = 4",
+  "priority for counting coronas or for certifying Heesch numbers",
+  "human expert review"
+ ],
+ "claims": [
+  {
+   "id": "encoding-soundness",
+   "paper_label": "thm:sound",
+   "kind": "lean-proof",
+   "statement": "For the square, hexagonal and triangular grids, every finite S, K >= 1, every permutation order of the at-most-one counter inputs and every list of hole blocks valid for level K-1 (resp. K): if cnfOrd G ord S K blocks is unsatisfiable, S has no Hh-corona (resp. Hc-corona) with K layers.",
+   "lean": {
+    "statement_file": "formal/Heesch/Challenge.lean",
+    "solution_module": "Heesch.Solution",
+    "declarations": [
+     "Heesch.hh_sound_square",
+     "Heesch.hc_sound_square",
+     "Heesch.hh_sound_hex",
+     "Heesch.hc_sound_hex",
+     "Heesch.hh_sound_tri",
+     "Heesch.hc_sound_tri"
+    ],
+    "axioms": [
+     "propext",
+     "Classical.choice",
+     "Quot.sound"
+    ],
+    "kernel_runs": "Comparator --paranoid: Lean kernel (paranoid and default), lean4lean, nanoda, con-leche, con-ron; six runs, five implementations",
+    "statement_reading": "independent AI reading against the specification and Kaplan's definitions: faithful with caveats (not a human review)"
+   },
+   "evidence": [
+    {
+     "path": "formal/Heesch/Challenge.lean",
+     "sha256": "3a637f3260f784d00f7a332eb10351563bd4605b2e03458836b8a67781780d73",
+     "bytes": 28045
+    },
+    {
+     "path": "formal/Heesch/Solution.lean",
+     "sha256": "6815e14f3ab821a4745c36ef9fe3957735382217610ed69bd9b2eb394e01dc17",
+     "bytes": 3886
+    },
+    {
+     "path": "formal/comparator.json",
+     "sha256": "4384decb389cc29850dc0912c1d7c804969c14b6f23c8ed50d5ada201f77ca3b",
+     "bytes": 389
+    },
+    {
+     "path": "ci/Axioms.lean",
+     "sha256": "46df3258d571dea6038855081c12b844fb66369243e1c250f9090c958f06c772",
+     "bytes": 448
+    },
+    {
+     "path": "evidence/comparator-2026-10-22.txt",
+     "sha256": "45a00af03d145fb53865cb0df54ab049eb2a2990b24acbccfd7088a3ea4375b4",
+     "bytes": 16079
+    },
+    {
+     "path": "evidence/comparator-public-names-2026-10-23.txt",
+     "sha256": "9ef58070bd01e50b667f17f15b0eb2f728df1964d44372626e9f16aeb66bfbc4",
+     "bytes": 15204
+    }
+   ],
+   "reproduce": "CI job 'lean' (lake build, ci/Axioms.lean, lake comparator --paranoid)",
+   "qualification": "statement accepts any finite set of points as S; copies on the fixed grid; the link between a DIMACS file and cnfOrd is outside the statement"
+  },
+  {
+   "id": "square-instance-equals-earlier-definition",
+   "paper_label": "sec:lean",
+   "kind": "lean-proof",
+   "statement": "cnfOrd squareGrid ord S K blocks equals the earlier square-only cnfOrd for all arguments.",
+   "lean": {
+    "statement_file": "formal/Heesch/SquareEq.lean",
+    "declarations": [
+     "HeeschProof.cnfOrd_square"
+    ],
+    "axioms": [
+     "propext",
+     "Classical.choice",
+     "Quot.sound"
+    ],
+    "kernel_runs": "Lean kernel (lake build); outside the Comparator statement"
+   },
+   "evidence": [
+    {
+     "path": "formal/Heesch/SquareEq.lean",
+     "sha256": "e02d583b02fdf619e25403238b79ec7962d4b8b2146bb618ff89bf64bb26db78",
+     "bytes": 4210
+    },
+    {
+     "path": "ci/Axioms.lean",
+     "sha256": "46df3258d571dea6038855081c12b844fb66369243e1c250f9090c958f06c772",
+     "bytes": 448
+    }
+   ],
+   "reproduce": "CI job 'lean'"
+  },
+  {
+   "id": "lower-bounds",
+   "paper_label": "sec:certificates",
+   "kind": "finite-computation",
+   "statement": "6,574 corona witnesses for the 3,964 selected shapes (Table 3) satisfy (P0)-(P3), congruence and the disc conditions for the claimed Hc and Hh; two separately written geometric checkers accept all.",
+   "evidence": [
+    {
+     "path": "witnesses/hex/06hex_0up.jsonl",
+     "sha256": "faa0fca589ecb7c84eea934ec096a7acd2fea073b5876e1f8fb1eff4a5f48f46",
+     "bytes": 5291
+    },
+    {
+     "path": "witnesses/hex/07hex_0up.jsonl",
+     "sha256": "897f7dd0cfc1d98662b82857046cde6b11cc2aeab05eeb832fcf2ad43dda10c7",
+     "bytes": 55753
+    },
+    {
+     "path": "witnesses/hex/08hex_0up.jsonl",
+     "sha256": "8ce02f0921c16dfd6e8845c12802a70acca8b2570049215f770de9dd24a7f121",
+     "bytes": 528458
+    },
+    {
+     "path": "witnesses/hex/10hex_2up.jsonl",
+     "sha256": "549f0294ddb79b5c80a8e94d928bc0536effa77b32489043f99ce72825a8b595",
+     "bytes": 8427
+    },
+    {
+     "path": "witnesses/hex/11hex_3up.jsonl",
+     "sha256": "426387fdd8e1a9d4cbf8248cf9837c1c9cd6d178a0d003bffc175b5709c13392",
+     "bytes": 56549
+    },
+    {
+     "path": "witnesses/hex/12hex_3up.jsonl",
+     "sha256": "80cdd8462f6145c1a2d8f8a6501f6cebf1a939b5d6d7df72632464968cff1145",
+     "bytes": 19083
+    },
+    {
+     "path": "witnesses/hex/13hex_3up.jsonl",
+     "sha256": "4895eb83fbd4267850413aa5e3cc49afcb52998e5488bf86c1944f62eb9758e7",
+     "bytes": 25808
+    },
+    {
+     "path": "witnesses/hex/15hex_3up.jsonl",
+     "sha256": "e9447a82e76cc8878d92893f77d4512222d914e0fc5dd101676008a73b607dcb",
+     "bytes": 33766
+    },
+    {
+     "path": "witnesses/hex/16hex_3up.jsonl",
+     "sha256": "b31c45cd599c44e0bc6f7e22564d9e45b5c054265bca028e954dbd8a1b76a683",
+     "bytes": 22107
+    },
+    {
+     "path": "witnesses/iamond/07iamond_0up.jsonl",
+     "sha256": "54365f4f62819b0668827a354fd78bd4d51ffb87a1306cc3dc4ca47d74ae5100",
+     "bytes": 590
+    },
+    {
+     "path": "witnesses/iamond/09iamond_0up.jsonl",
+     "sha256": "0f812fe9c6af15a1a6303b16abdc2552243371a858ce7086747da2102acfabe7",
+     "bytes": 13558
+    },
+    {
+     "path": "witnesses/iamond/10iamond_0up.jsonl",
+     "sha256": "8719ee56f879e9d9164ba42747773d5974c7a6fbdc9344d0b96090e7bc6c5b14",
+     "bytes": 119843
+    },
+    {
+     "path": "witnesses/iamond/11iamond_0up.jsonl",
+     "sha256": "61eaa38574b272331f5128cf059145167d06d748891f052e2a0a3573d20d6f46",
+     "bytes": 758200
+    },
+    {
+     "path": "witnesses/iamond/12iamond_0up.jsonl",
+     "sha256": "f828e250cbb94dbb183980a0cf0665c903fe4260accf51968f4c0824c0ff678b",
+     "bytes": 1148647
+    },
+    {
+     "path": "witnesses/iamond/20iamond_2up.jsonl",
+     "sha256": "c99504e4ab28cee23e341b568831537db0203266bbdca30e6e0db75d92fd9812",
+     "bytes": 23690
+    },
+    {
+     "path": "witnesses/omino/07omino_0up.jsonl",
+     "sha256": "f9895473cc6af875cdcac48d03d17167b92927aeb33b8cdf90fdb1affe68cef0",
+     "bytes": 2753
+    },
+    {
+     "path": "witnesses/omino/08omino_0up.jsonl",
+     "sha256": "4363cc0e922eedd37e044112b90ff88cc04270c78d5996a44a7e6417527e865f",
+     "bytes": 20435
+    },
+    {
+     "path": "witnesses/omino/09omino_0up.jsonl",
+     "sha256": "533b124c993c9512630cec47182436cca09518a16834d10976af3f4c10e37cfc",
+     "bytes": 191346
+    },
+    {
+     "path": "witnesses/omino/10omino_0up.jsonl",
+     "sha256": "0826fd342b39951e7cf740743198c1490d4a7d2bfb84b51d9bfcc8efa24ddab1",
+     "bytes": 1319753
+    },
+    {
+     "path": "witnesses/omino/11omino_2up.jsonl",
+     "sha256": "b213db5ef18bc0ccde3a12661d47c7072e470415c97b59f5080dcf9a4b17f959",
+     "bytes": 5026
+    },
+    {
+     "path": "witnesses/omino/13omino_2up.jsonl",
+     "sha256": "b527ab279d79b6ab8b312c95b9a8822986e35fe108d6b4241951f343ec0d01a8",
+     "bytes": 6915
+    },
+    {
+     "path": "witnesses/omino/17omino_2up.jsonl",
+     "sha256": "7b2637b6ffe01e09bf4936d85eb69bec9571b09437553995191bbde000fd8e18",
+     "bytes": 22580
+    },
+    {
+     "path": "checkers/check_witness.py",
+     "sha256": "851fb6b64650f095d300468a9fb76033592e388f6fe0bcbbef0dd9cd7b90232e",
+     "bytes": 10024
+    },
+    {
+     "path": "checkers/geometry.py",
+     "sha256": "35ec16f548a303e77ccc564ede6b06eb7df52f17352ea98c1b94423c6f900ddc",
+     "bytes": 8821
+    },
+    {
+     "path": "checkers/check_all_witnesses.py",
+     "sha256": "f6cecda454d181c38039cfe9f85add37c3b1cdd658d946041928a5f3eb54a54a",
+     "bytes": 3295
+    }
+   ],
+   "reproduce": "python3 -B checkers/check_all_witnesses.py (seconds); part of ci_check.py",
+   "numbers": {
+    "shapes": 3964,
+    "witnesses": 6574,
+    "combined": 1354
+   }
+  },
+  {
+   "id": "upper-bounds",
+   "paper_label": "sec:certificates",
+   "kind": "finite-computation",
+   "statement": "For every selected shape, the CNF for K = Hh+1 (mode Hh, no blocks) and, if Hc < Hh, for K = Hc+1 (mode Hc, with hole blocks) is unsatisfiable: 5,019 DRAT/DRUP proofs accepted by drat-trim.",
+   "evidence": [
+    {
+     "path": "certificates/hex/06hex_0up.jsonl",
+     "sha256": "633c09e16a5193a5cb5c3e2c61abd250e260ca40dad8a65709268d41c670e95f",
+     "bytes": 2671
+    },
+    {
+     "path": "certificates/hex/07hex_0up.jsonl",
+     "sha256": "e41f2524df310cc1d285619765883df86bfaadc0e3b60dda54318c5d67c12639",
+     "bytes": 73097
+    },
+    {
+     "path": "certificates/hex/08hex_0up.jsonl",
+     "sha256": "eaaa28edfad021af3dc12c570c59e871fb5fb0de499345d2b287a1bca2499df9",
+     "bytes": 610365
+    },
+    {
+     "path": "certificates/hex/10hex_2up.jsonl",
+     "sha256": "d6c92da8d9801454ab5905580b5d94ad255cf8ae2457f4c9c75a60a703912f11",
+     "bytes": 6114
+    },
+    {
+     "path": "certificates/hex/11hex_3up.jsonl",
+     "sha256": "a11ddfe6c09bb873daaff3e505bd74ffc58ac51b3bc15a27461c50043496f665",
+     "bytes": 28229
+    },
+    {
+     "path": "certificates/hex/12hex_3up.jsonl",
+     "sha256": "91454c800fe34dc8ee5653db25f21a1e79daab7878e65123ea322d46b26f9d97",
+     "bytes": 9386
+    },
+    {
+     "path": "certificates/hex/13hex_3up.jsonl",
+     "sha256": "d24db613672e7cb2757dac806dfc86336dbb6d54511b726f96e087027d655e7d",
+     "bytes": 9896
+    },
+    {
+     "path": "certificates/hex/15hex_3up.jsonl",
+     "sha256": "6158485e47c4c4f2efcb1b8ca32f9072b891aaadd84a2ac7536f1b59ef9b0f2e",
+     "bytes": 1475
+    },
+    {
+     "path": "certificates/hex/16hex_3up.jsonl",
+     "sha256": "87720dafe61fd299f9cbad2827e7a5556ed9699b8069371eb8692c479caa3862",
+     "bytes": 11741
+    },
+    {
+     "path": "certificates/iamond/07iamond_0up.jsonl",
+     "sha256": "7eb744fddb4dae6cdecc1148983c027f41b06b79098a015248c6f8050cd4f9c9",
+     "bytes": 692
+    },
+    {
+     "path": "certificates/iamond/09iamond_0up.jsonl",
+     "sha256": "d120c2100e517474bf817af79421463238d4e684e7c731217bc113b1f6710377",
+     "bytes": 28771
+    },
+    {
+     "path": "certificates/iamond/10iamond_0up.jsonl",
+     "sha256": "df5ff28bf9916b31fb2b69649153e91a80c5d5336d4bfd5a13653d8c63397069",
+     "bytes": 139373
+    },
+    {
+     "path": "certificates/iamond/11iamond_0up.jsonl",
+     "sha256": "62f859348b907445059d50687da1415e117584da278f4b30fe2e755f246ea703",
+     "bytes": 817664
+    },
+    {
+     "path": "certificates/iamond/12iamond_0up.jsonl",
+     "sha256": "c8a8deb671b18a5641e94c79e9212ebf9177b1b3f6f502aa382f37e68ec42477",
+     "bytes": 1681864
+    },
+    {
+     "path": "certificates/iamond/20iamond_2up.jsonl",
+     "sha256": "cf2da3d7340f2ce969553cc0d6793c8d28060b0a2f4d13cbb1c973baf7613940",
+     "bytes": 810
+    },
+    {
+     "path": "certificates/omino/07omino_0up.jsonl",
+     "sha256": "d43401fceb42846ab7b9fabdb64cdac6afbf7b8f669a7caaf46648bc19d3fb30",
+     "bytes": 3644
+    },
+    {
+     "path": "certificates/omino/08omino_0up.jsonl",
+     "sha256": "7737263e897a37fefe46ba9ac9c0e2752191e63c0158afa64affca1e72ddd643",
+     "bytes": 33993
+    },
+    {
+     "path": "certificates/omino/09omino_0up.jsonl",
+     "sha256": "3d91535cf790c52c681ee5f5d1b308532af8076e3f8546f6d6003b85f8e2fc52",
+     "bytes": 292364
+    },
+    {
+     "path": "certificates/omino/10omino_0up.jsonl",
+     "sha256": "ef8a79b468d28606b0e26c1769b824631e7471b2024664db9cf6b59d239882c5",
+     "bytes": 2523591
+    },
+    {
+     "path": "certificates/omino/11omino_2up.jsonl",
+     "sha256": "b487407aae71f18c39815a4341cc4ccec0fc54ba74dbb34a9869b22fcd132625",
+     "bytes": 2616
+    },
+    {
+     "path": "certificates/omino/13omino_2up.jsonl",
+     "sha256": "2d34b6173157ab22d023ae4e373c18a3573f5b217ce522c7d3b06b4ae91edee4",
+     "bytes": 5211
+    },
+    {
+     "path": "certificates/omino/17omino_2up.jsonl",
+     "sha256": "7ccb250cb26e5c8db0b96c1e3c8f0973056866490b37d3b57b7379463f4b11cd",
+     "bytes": 6555
+    },
+    {
+     "path": "generator/encode.py",
+     "sha256": "4af86bae8c6cdf4fd4e6a4f71763fd26fa53fe64a085dd9ea8517dec7b9dc4de",
+     "bytes": 11422
+    },
+    {
+     "path": "generator/grids.py",
+     "sha256": "a797e8de0e485b0d2371384cbd6e9198bfe478e25b15f205b0324b436b1c0de1",
+     "bytes": 7267
+    },
+    {
+     "path": "generator/heesch.py",
+     "sha256": "8a9a1cc6bfdfce79e48f67f4578c19ad9371a10c9f8619869b56fb903d54b31f",
+     "bytes": 13625
+    },
+    {
+     "path": "recheck_certificates.py",
+     "sha256": "4cb7f5c54b9b36c46590124270698932e46d0d71a0a3501634bc16ca5f425c77",
+     "bytes": 6172
+    },
+    {
+     "path": "tools/build_drat_trim.sh",
+     "sha256": "752cc39571647adb07b8264f445c16c7f6fc243a7fd6d8c1a217f1db1083a290",
+     "bytes": 833
+    }
+   ],
+   "reproduce": "python3 -B recheck_certificates.py --sample (CI) or --all (hours); CNFs regenerate byte-identically",
+   "numbers": {
+    "certificates": 5019,
+    "Hh": 3964,
+    "Hc": 1055,
+    "blocks": 13287,
+    "cadical_binary_drat": 4998,
+    "glucose_drup": 16,
+    "lingeling_text_drat": 5,
+    "cnf_total_bytes": 8701205806,
+    "proof_total_bytes": 25184139473,
+    "largest_proof_bytes": 7175887914
+   },
+   "qualification": "drat-trim is not formally verified; proofs are not archived (regenerated by the recorded solver)"
+  },
+  {
+   "id": "file-comparison",
+   "paper_label": "sec:bridge",
+   "kind": "finite-computation",
+   "statement": "Each of the 5,019 checked CNF files is equivalent up to renaming of variables (and reordering of clauses and literals) to the Lean cnfOrd for the recorded grid, shape, K, blocks and the counter order recovered from the file; all blocks are valid.",
+   "evidence": [
+    {
+     "path": "bridge/file-comparison.jsonl.gz",
+     "sha256": "e360d93fbdad09ad1a3b94d9313889a52b7c2b0eda938404ee99c208dc7f3e02",
+     "bytes": 907565
+    },
+    {
+     "path": "bridge/summary.json",
+     "sha256": "41df164e3c9041e641a982dcde51246b850cf9074b68bcc1ce92e82314b82f7b",
+     "bytes": 1352
+    }
+   ],
+   "reproduce": "records only; check_packet.py cross-checks every row against the certificate records",
+   "qualification": "the Python transcriptions of cnfOrd were validated on 64 Lean outputs, not proved; the comparison programs are not part of this packet"
+  },
+  {
+   "id": "values-agree-second-encoding",
+   "paper_label": "sec:certificates",
+   "kind": "independent-implementation",
+   "statement": "A second encoding, written from the mathematical description without the first implementation, agrees with the first and with Kaplan on (Hc, Hh) for all 3,964 shapes; all 5,019 upper-bound instances are UNSAT there and all witnesses satisfy its clauses.",
+   "evidence": [
+    {
+     "path": "VERIFICATION-RECORD.md",
+     "sha256": "211490b0bb18af15caa00cbc75a8abc479ef7fbcc4d5186e1adef3b13804ecb0",
+     "bytes": 14760
+    }
+   ],
+   "reproduce": "not distributed (no proof logs)",
+   "qualification": "shares the specification and SAT solvers; corroborates values, not a second certificate"
+  },
+  {
+   "id": "maximal-corona-counts",
+   "paper_label": "tab:counts",
+   "kind": "independent-implementation",
+   "statement": "Table 6: prefix counts N_1..N_k and totals N_k of maximal Hh- and Hc-coronas for 22 shapes (30 shape-variant combinations); two separate counting implementations agree in 28 combinations (prefix sets in cell coordinates, every per-inner-part completion count, totals); for 15-hex #315 the prefix sets agree and the totals come from the second implementation only.",
+   "evidence": [
+    {
+     "path": "counts/table.json",
+     "sha256": "7b8ab0b2a8067949988decc8e637b5364c7f068b775f5b22d7c5a544c13dec6c",
+     "bytes": 38726
+    },
+    {
+     "path": "counts/inner-parts/hex-10hex_2up-13-Hh.json.gz",
+     "sha256": "e034551e564dce61da042492690d7ec11ee4ece4c22f48197d28408253f39bcf",
+     "bytes": 6490
+    },
+    {
+     "path": "counts/inner-parts/hex-11hex_3up-18-Hc.json.gz",
+     "sha256": "2f593afd4ffc5f180de19c3ebb328678bf9ee4b22caa74c507f4abcc4431c774",
+     "bytes": 2221
+    },
+    {
+     "path": "counts/inner-parts/hex-11hex_3up-18-Hh.json.gz",
+     "sha256": "a9316cec71580da83f8d4cde1a4819580ae8316bb65b978cfcc6d0019abfdd0c",
+     "bytes": 3479
+    },
+    {
+     "path": "counts/inner-parts/hex-11hex_3up-20-Hh.json.gz",
+     "sha256": "ec3eaa0949e2e9d25b5995f89efaebd26b06f6b6f8db6b046751a695aad4ceef",
+     "bytes": 2015
+    },
+    {
+     "path": "counts/inner-parts/hex-11hex_3up-30-Hh.json.gz",
+     "sha256": "c9d73ca2419f37ed3e8b2ac47e874ccfe9079a611203db74daec466e9a64c679",
+     "bytes": 20835
+    },
+    {
+     "path": "counts/inner-parts/hex-11hex_3up-32-Hh.json.gz",
+     "sha256": "14f6f3720f1a381d8a54bf17bd88dcd03cf4fcc3164aadf187a72279feb1d87e",
+     "bytes": 6524
+    },
+    {
+     "path": "counts/inner-parts/hex-11hex_3up-37-Hh.json.gz",
+     "sha256": "373c4354b02902993b0ce1815286b78769497b0024b524024fd878968b0f4846",
+     "bytes": 1836
+    },
+    {
+     "path": "counts/inner-parts/hex-11hex_3up-59-Hh.json.gz",
+     "sha256": "cc381159a45ed2c285f80bfa3f93bc70b6393625ca014563e0bc09e90786782b",
+     "bytes": 2423
+    },
+    {
+     "path": "counts/inner-parts/hex-12hex_3up-21-Hh.json.gz",
+     "sha256": "f2913f291bf8d573084c196b7d657ca3e23d3d120c5adabb9501ea93a2cae7f7",
+     "bytes": 1843
+    },
+    {
+     "path": "counts/inner-parts/hex-12hex_3up-5-Hh.json.gz",
+     "sha256": "dd4c81c9c53fbbae9e90c9f67bc6a563228fcfe7891ff1d29c6d861eb6601a4b",
+     "bytes": 114275
+    },
+    {
+     "path": "counts/inner-parts/hex-13hex_3up-19-Hc.json.gz",
+     "sha256": "46f5e7c44ead1ada35a8537b2286593f8dfd5a650066848a32302a86c5f56d28",
+     "bytes": 2125
+    },
+    {
+     "path": "counts/inner-parts/hex-13hex_3up-19-Hh.json.gz",
+     "sha256": "92a07ffd6f9e240babf6b7d517a4284f4771718834c6d9e97a3af52875632fec",
+     "bytes": 2625
+    },
+    {
+     "path": "counts/inner-parts/hex-13hex_3up-38-Hh.json.gz",
+     "sha256": "4d1486cebc8e78d92d07417003d2712e4d6143d291789de02ddcdca06c788d01",
+     "bytes": 8066
+    },
+    {
+     "path": "counts/inner-parts/hex-15hex_3up-278-Hc.json.gz",
+     "sha256": "14bfedd365f67494c5d9f20eacea92c4ca1e8098aeca62b65c02068f15afdc67",
+     "bytes": 10235
+    },
+    {
+     "path": "counts/inner-parts/hex-15hex_3up-278-Hh.json.gz",
+     "sha256": "c69973173f8d7cec158e9ac41989eb3ab9e16501fda25ef9080aaaa179d6e6b9",
+     "bytes": 81785
+    },
+    {
+     "path": "counts/inner-parts/hex-15hex_3up-315-Hc.json.gz",
+     "sha256": "42c842194d2c739d217ebe33b1d0cb05da5095e5bd31015e974c79411060147d",
+     "bytes": 62865
+    },
+    {
+     "path": "counts/inner-parts/hex-15hex_3up-315-Hh.json.gz",
+     "sha256": "26d4c973d9c70c66679c6fe13dafca42169f507895108b5c8d9ea7a407ee09fb",
+     "bytes": 636287
+    },
+    {
+     "path": "counts/inner-parts/hex-16hex_3up-2-Hc.json.gz",
+     "sha256": "f221482802dcc489a3eb9cf52f70a303e3e0c461bd15c9d4d070864a80d2eacd",
+     "bytes": 2696
+    },
+    {
+     "path": "counts/inner-parts/hex-16hex_3up-2-Hh.json.gz",
+     "sha256": "7999bf8c4a4eef2ac926a6f98b37ee1790769c6b6fa07bf958ce6519784be484",
+     "bytes": 2736
+    },
+    {
+     "path": "counts/inner-parts/hex-16hex_3up-72-Hh.json.gz",
+     "sha256": "ebfba776a5d84d9f4f590527d077c46eb7d05016190aa8a84d70ec662010709a",
+     "bytes": 6199
+    },
+    {
+     "path": "counts/inner-parts/iamond-10iamond_0up-51-Hh.json.gz",
+     "sha256": "e2fa2278a145b3b161be31c1599074691144271744c0ab9ec1b49c0899c75a70",
+     "bytes": 86447
+    },
+    {
+     "path": "counts/inner-parts/iamond-20iamond_2up-130-Hc.json.gz",
+     "sha256": "f405dc556b93a74e0407f57b688d37fdf231f2931d9ef98658f36120fba8e0eb",
+     "bytes": 4452
+    },
+    {
+     "path": "counts/inner-parts/iamond-20iamond_2up-130-Hh.json.gz",
+     "sha256": "83c919f4ac88f885d71f83f87096aa836d26f6b84787405dec42feb07c99e45a",
+     "bytes": 42278
+    },
+    {
+     "path": "counts/inner-parts/omino-11omino_2up-2-Hh.json.gz",
+     "sha256": "5591afbab1429e737ac73a0ad79ff406e4ca54d6554bada14cc1dbf3254fbf48",
+     "bytes": 1235
+    },
+    {
+     "path": "counts/inner-parts/omino-13omino_2up-50-Hh.json.gz",
+     "sha256": "e808a12d94865ac55a7cb4a99b02af9ff390ad489ecca33d601331b492033834",
+     "bytes": 1641
+    },
+    {
+     "path": "counts/inner-parts/omino-17omino_2up-192-Hc.json.gz",
+     "sha256": "078562539a240076786f1f88ef3603f41b76eaea900d2e7ebb01be00b91573fe",
+     "bytes": 1903
+    },
+    {
+     "path": "counts/inner-parts/omino-17omino_2up-192-Hh.json.gz",
+     "sha256": "3f53b90ee27bf582e1817aaa2e9e1a77ad350cd1c67193f4451f55fb78b31fd7",
+     "bytes": 3376
+    },
+    {
+     "path": "counts/inner-parts/omino-17omino_2up-43-Hc.json.gz",
+     "sha256": "0cb706ad71c5374db23da705f8507a02fdd89ec5da3d28ec4e35796f361b8054",
+     "bytes": 1646
+    },
+    {
+     "path": "counts/inner-parts/omino-17omino_2up-43-Hh.json.gz",
+     "sha256": "23372012e7bc6aa277fe601fdc08ea84b484d4ef883c831e5a5bec72b7100569",
+     "bytes": 1769
+    },
+    {
+     "path": "counts/inner-parts/omino-17omino_2up-521-Hh.json.gz",
+     "sha256": "6a47cf83f68040a1aee501aac93de4c83d0d95c4e39388c28ec870c1f81672db",
+     "bytes": 1880
+    },
+    {
+     "path": "check_counts.py",
+     "sha256": "1172c7a8d90806cc2daff7c7c553d8081b079a9a8a8fa09f7f07ca02335dde2e",
+     "bytes": 5332
+    }
+   ],
+   "reproduce": "python3 -B check_counts.py (recompares both sides and checks every inner part and every completed corona geometrically)",
+   "qualification": "inner enumeration has checked DRAT exhaustion proofs in 28 combinations, whose CNFs are outside the Lean theorem and the file comparison; outer counts have no proof certificate"
+  },
+  {
+   "id": "forced-inner-parts",
+   "paper_label": "sec:counts",
+   "kind": "finite-computation",
+   "statement": "In the 28 fully compared combinations no outer layer is forced (minimum completion count 2); exactly six Hh and four Hc combinations have a unique inner part.",
+   "evidence": [
+    {
+     "path": "counts/table.json",
+     "sha256": "7b8ab0b2a8067949988decc8e637b5364c7f068b775f5b22d7c5a544c13dec6c",
+     "bytes": 38726
+    },
+    {
+     "path": "counts/inner-parts/hex-10hex_2up-13-Hh.json.gz",
+     "sha256": "e034551e564dce61da042492690d7ec11ee4ece4c22f48197d28408253f39bcf",
+     "bytes": 6490
+    },
+    {
+     "path": "counts/inner-parts/hex-11hex_3up-18-Hc.json.gz",
+     "sha256": "2f593afd4ffc5f180de19c3ebb328678bf9ee4b22caa74c507f4abcc4431c774",
+     "bytes": 2221
+    },
+    {
+     "path": "counts/inner-parts/hex-11hex_3up-18-Hh.json.gz",
+     "sha256": "a9316cec71580da83f8d4cde1a4819580ae8316bb65b978cfcc6d0019abfdd0c",
+     "bytes": 3479
+    },
+    {
+     "path": "counts/inner-parts/hex-11hex_3up-20-Hh.json.gz",
+     "sha256": "ec3eaa0949e2e9d25b5995f89efaebd26b06f6b6f8db6b046751a695aad4ceef",
+     "bytes": 2015
+    },
+    {
+     "path": "counts/inner-parts/hex-11hex_3up-30-Hh.json.gz",
+     "sha256": "c9d73ca2419f37ed3e8b2ac47e874ccfe9079a611203db74daec466e9a64c679",
+     "bytes": 20835
+    },
+    {
+     "path": "counts/inner-parts/hex-11hex_3up-32-Hh.json.gz",
+     "sha256": "14f6f3720f1a381d8a54bf17bd88dcd03cf4fcc3164aadf187a72279feb1d87e",
+     "bytes": 6524
+    },
+    {
+     "path": "counts/inner-parts/hex-11hex_3up-37-Hh.json.gz",
+     "sha256": "373c4354b02902993b0ce1815286b78769497b0024b524024fd878968b0f4846",
+     "bytes": 1836
+    },
+    {
+     "path": "counts/inner-parts/hex-11hex_3up-59-Hh.json.gz",
+     "sha256": "cc381159a45ed2c285f80bfa3f93bc70b6393625ca014563e0bc09e90786782b",
+     "bytes": 2423
+    },
+    {
+     "path": "counts/inner-parts/hex-12hex_3up-21-Hh.json.gz",
+     "sha256": "f2913f291bf8d573084c196b7d657ca3e23d3d120c5adabb9501ea93a2cae7f7",
+     "bytes": 1843
+    },
+    {
+     "path": "counts/inner-parts/hex-12hex_3up-5-Hh.json.gz",
+     "sha256": "dd4c81c9c53fbbae9e90c9f67bc6a563228fcfe7891ff1d29c6d861eb6601a4b",
+     "bytes": 114275
+    },
+    {
+     "path": "counts/inner-parts/hex-13hex_3up-19-Hc.json.gz",
+     "sha256": "46f5e7c44ead1ada35a8537b2286593f8dfd5a650066848a32302a86c5f56d28",
+     "bytes": 2125
+    },
+    {
+     "path": "counts/inner-parts/hex-13hex_3up-19-Hh.json.gz",
+     "sha256": "92a07ffd6f9e240babf6b7d517a4284f4771718834c6d9e97a3af52875632fec",
+     "bytes": 2625
+    },
+    {
+     "path": "counts/inner-parts/hex-13hex_3up-38-Hh.json.gz",
+     "sha256": "4d1486cebc8e78d92d07417003d2712e4d6143d291789de02ddcdca06c788d01",
+     "bytes": 8066
+    },
+    {
+     "path": "counts/inner-parts/hex-15hex_3up-278-Hc.json.gz",
+     "sha256": "14bfedd365f67494c5d9f20eacea92c4ca1e8098aeca62b65c02068f15afdc67",
+     "bytes": 10235
+    },
+    {
+     "path": "counts/inner-parts/hex-15hex_3up-278-Hh.json.gz",
+     "sha256": "c69973173f8d7cec158e9ac41989eb3ab9e16501fda25ef9080aaaa179d6e6b9",
+     "bytes": 81785
+    },
+    {
+     "path": "counts/inner-parts/hex-15hex_3up-315-Hc.json.gz",
+     "sha256": "42c842194d2c739d217ebe33b1d0cb05da5095e5bd31015e974c79411060147d",
+     "bytes": 62865
+    },
+    {
+     "path": "counts/inner-parts/hex-15hex_3up-315-Hh.json.gz",
+     "sha256": "26d4c973d9c70c66679c6fe13dafca42169f507895108b5c8d9ea7a407ee09fb",
+     "bytes": 636287
+    },
+    {
+     "path": "counts/inner-parts/hex-16hex_3up-2-Hc.json.gz",
+     "sha256": "f221482802dcc489a3eb9cf52f70a303e3e0c461bd15c9d4d070864a80d2eacd",
+     "bytes": 2696
+    },
+    {
+     "path": "counts/inner-parts/hex-16hex_3up-2-Hh.json.gz",
+     "sha256": "7999bf8c4a4eef2ac926a6f98b37ee1790769c6b6fa07bf958ce6519784be484",
+     "bytes": 2736
+    },
+    {
+     "path": "counts/inner-parts/hex-16hex_3up-72-Hh.json.gz",
+     "sha256": "ebfba776a5d84d9f4f590527d077c46eb7d05016190aa8a84d70ec662010709a",
+     "bytes": 6199
+    },
+    {
+     "path": "counts/inner-parts/iamond-10iamond_0up-51-Hh.json.gz",
+     "sha256": "e2fa2278a145b3b161be31c1599074691144271744c0ab9ec1b49c0899c75a70",
+     "bytes": 86447
+    },
+    {
+     "path": "counts/inner-parts/iamond-20iamond_2up-130-Hc.json.gz",
+     "sha256": "f405dc556b93a74e0407f57b688d37fdf231f2931d9ef98658f36120fba8e0eb",
+     "bytes": 4452
+    },
+    {
+     "path": "counts/inner-parts/iamond-20iamond_2up-130-Hh.json.gz",
+     "sha256": "83c919f4ac88f885d71f83f87096aa836d26f6b84787405dec42feb07c99e45a",
+     "bytes": 42278
+    },
+    {
+     "path": "counts/inner-parts/omino-11omino_2up-2-Hh.json.gz",
+     "sha256": "5591afbab1429e737ac73a0ad79ff406e4ca54d6554bada14cc1dbf3254fbf48",
+     "bytes": 1235
+    },
+    {
+     "path": "counts/inner-parts/omino-13omino_2up-50-Hh.json.gz",
+     "sha256": "e808a12d94865ac55a7cb4a99b02af9ff390ad489ecca33d601331b492033834",
+     "bytes": 1641
+    },
+    {
+     "path": "counts/inner-parts/omino-17omino_2up-192-Hc.json.gz",
+     "sha256": "078562539a240076786f1f88ef3603f41b76eaea900d2e7ebb01be00b91573fe",
+     "bytes": 1903
+    },
+    {
+     "path": "counts/inner-parts/omino-17omino_2up-192-Hh.json.gz",
+     "sha256": "3f53b90ee27bf582e1817aaa2e9e1a77ad350cd1c67193f4451f55fb78b31fd7",
+     "bytes": 3376
+    },
+    {
+     "path": "counts/inner-parts/omino-17omino_2up-43-Hc.json.gz",
+     "sha256": "0cb706ad71c5374db23da705f8507a02fdd89ec5da3d28ec4e35796f361b8054",
+     "bytes": 1646
+    },
+    {
+     "path": "counts/inner-parts/omino-17omino_2up-43-Hh.json.gz",
+     "sha256": "23372012e7bc6aa277fe601fdc08ea84b484d4ef883c831e5a5bec72b7100569",
+     "bytes": 1769
+    },
+    {
+     "path": "counts/inner-parts/omino-17omino_2up-521-Hh.json.gz",
+     "sha256": "6a47cf83f68040a1aee501aac93de4c83d0d95c4e39388c28ec870c1f81672db",
+     "bytes": 1880
+    },
+    {
+     "path": "check_counts.py",
+     "sha256": "1172c7a8d90806cc2daff7c7c553d8081b079a9a8a8fa09f7f07ca02335dde2e",
+     "bytes": 5332
+    }
+   ],
+   "reproduce": "python3 -B check_counts.py"
+  },
+  {
+   "id": "restricted-search",
+   "paper_label": "sec:search",
+   "kind": "finite-computation",
+   "statement": "Of the fixed collection of 3,442 polyominoes with 20-28 cells, 1,515 are K=1 UNSAT, 1,351 K=3 UNSAT and 576 have explicit periodic tilings; no finite-Hh=4 example is obtained.",
+   "evidence": [
+    {
+     "path": "search/audit-witnesses.json",
+     "sha256": "df5c10247add5b21d99d45be1c083f4711e36d6bd11618f95ad3e66ddf42db98",
+     "bytes": 195
+    },
+    {
+     "path": "search/audit.json",
+     "sha256": "18c0824045893bdf2e95802ebdb72cb4e9ec241c223c9e31d08a80ef6848c606",
+     "bytes": 1025
+    },
+    {
+     "path": "search/candidates.jsonl.gz",
+     "sha256": "d12cd38744641731000b0082f56c6fe4d2d24ee8f075d044ff982566561f3f30",
+     "bytes": 352212
+    },
+    {
+     "path": "search/classification.jsonl",
+     "sha256": "2c9cd14facb9024e0a1d749b8aafa0ce5409f7f300a45d70797faab7b59d0b24",
+     "bytes": 409612
+    },
+    {
+     "path": "search/periodic-tilings.jsonl.gz",
+     "sha256": "90115e5a8cccef19a60b18867a88245f1c66678bea58bb4a809288de30d3d88b",
+     "bytes": 51310
+    },
+    {
+     "path": "search/sample-certificates.json",
+     "sha256": "13763a6142a04177ad7c6b4984c0a6b2b73cffa1637ca3475e2500574b0d1462",
+     "bytes": 2610
+    },
+    {
+     "path": "search/sat-patches.jsonl.gz",
+     "sha256": "24af92a200cf13b2d059ebd28a01a476db8492fd54e55c8d2ca3f594a51c34b0",
+     "bytes": 545116
+    },
+    {
+     "path": "search/search.py",
+     "sha256": "f0a589b14adb0a20706c3e5d521418d0010df2a0025dbc092bc0350f7adeac8f",
+     "bytes": 26039
+    },
+    {
+     "path": "search/solver-crosscheck.json",
+     "sha256": "27dc7899b132a69d3dbe198bc42bffcbc057c388d62594ce3aa9ed79f5dfc077",
+     "bytes": 2969
+    },
+    {
+     "path": "search/summary.json",
+     "sha256": "3fec257198d055fd9cd084871628c812e217e25a2740401dd56fd58a18a01507",
+     "bytes": 2092
+    }
+   ],
+   "reproduce": "python3 -B check_search.py (identities, topology, all 576 tilings, 513 satisfying patches)",
+   "qualification": "UNSAT outcomes are solver records without proof logs except two sampled DRAT checks and 14 cross-checks; the collection is not exhaustive"
+  },
+  {
+   "id": "prose-steps",
+   "paper_label": "sec:status",
+   "kind": "prose",
+   "statement": "Lemma 1 (truncation, Hh-1 <= Hc <= Hh), Proposition 6 (minimality), the disc criteria used in counting, and the consequence that empty-block UNSAT excludes every (P0)-(P3) patch.",
+   "evidence": [
+    {
+     "path": "paper-heesch-certificates-v2.1-en.tex",
+     "sha256": "4e4871d4976f10ac82ac1fd930a2a5abf9de6b2026f5ee118f8ded79d991af11",
+     "bytes": 79189
+    }
+   ],
+   "reproduce": "read the article (Sections 3, 4, 9)"
+  }
+ ]
+}

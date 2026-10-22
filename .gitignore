@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+formal/.lake/
+tools/drat-trim/

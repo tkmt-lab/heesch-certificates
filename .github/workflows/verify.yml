@@ -1,0 +1,64 @@
+name: Packet verification
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read          # read-only; the checks need no secrets
+
+jobs:
+  records:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: System dependencies (Poppler for the PDF and privacy checks)
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - name: Packet file list, claims, record cross-checks, privacy
+        run: python3 -B check_packet.py
+      - name: Python dependencies
+        run: python3 -m pip install -r requirements.txt
+      - name: drat-trim at the pinned commit
+        run: sh tools/build_drat_trim.sh
+      - name: Witnesses, counts, search, Figure 1, sampled certificates
+        run: python3 -B ci_check.py --output "$RUNNER_TEMP/results"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verification-results
+          path: ${{ runner.temp }}/results
+
+  lean:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install elan
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: bubblewrap for the Comparator sandbox
+        # Ubuntu 24.04 restricts unprivileged user namespaces through AppArmor; bwrap needs them.
+        run: |
+          sudo apt-get update && sudo apt-get install -y bubblewrap
+          sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0 || true
+      - name: Download prebuilt Mathlib
+        working-directory: formal
+        run: lake exe cache get
+      - name: Build the proof modules and the statement
+        working-directory: formal
+        run: lake build && lake build Heesch.Challenge
+      - name: Axiom gate (standard axioms only)
+        working-directory: formal
+        run: |
+          lake env lean ../ci/Axioms.lean | tee axioms.txt
+          test "$(grep -c "depends on axioms: \[propext, Classical.choice, Quot.sound\]" axioms.txt)" -eq 7
+          test "$(wc -l < axioms.txt)" -eq 7
+      - name: Comparator (six kernel runs, sandboxed)
+        working-directory: formal
+        run: lake comparator --config comparator.json --paranoid | tee comparator.txt && grep -q "Your solution is okay!" comparator.txt

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "pages": 15,
+  "pdf_sha256": "9d9d0b7ad78991916cf4e6f0d5ce04ab7c0330bf7aac5e16465945c0a27c6dbc",
+  "source_sha256": "4e4871d4976f10ac82ac1fd930a2a5abf9de6b2026f5ee118f8ded79d991af11",
+  "overfull_boxes": false,
+  "undefined_references": false,
+  "unresolved_marks": false,
+  "engine": "Tectonic",
+  "source_date_epoch": 1792713600,
+  "all_pages_viewed": true,
+  "visual_inspection": {
+    "resolution_dpi": 80,
+    "checked": "clipping, equation and table layout, Figure 1, pagination, reference numbering and readability",
+    "method": "pages 2-15: the 80 dpi renders are byte-identical to the pages viewed in the v2.1 inspection (paper-v2.1-visual-check.json), inspection reused; page 1 changed (version line) and was viewed"
+  }
+}

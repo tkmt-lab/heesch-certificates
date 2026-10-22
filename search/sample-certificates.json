@@ -1,0 +1,225 @@
+{
+ "note": "two screening instances re-solved with proof output; same encoding as the certificates",
+ "rows": [
+  {
+   "id": "e961b9872c18b44355317ca239844a8f209450953d6d2961c071e32819fc4f80",
+   "shape": [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     4
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     2,
+     2
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     3,
+     3
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     3
+    ]
+   ],
+   "K": 1,
+   "mode": "Hh",
+   "blocks": [],
+   "solver": "cadical153",
+   "solver_options": {
+    "elim": 0,
+    "subsume": 0,
+    "vivify": 0,
+    "probe": 0
+   },
+   "cnf": {
+    "sha256": "be1be50f5e925d69e208dea2f22f9262a8f445386c4fae8293e5d676028a0108",
+    "bytes": 457147,
+    "vars": 9534,
+    "clauses": 35309
+   },
+   "proof": {
+    "sha256": "bd1a4da503004d55f420295f5eb312f6b7b9b6157b21b571b3ce8714c8ec791f",
+    "bytes": 13880,
+    "format": "binary DRAT (CaDiCaL 1.5.3 via python-sat)"
+   },
+   "drat_trim": {
+    "result": "s VERIFIED",
+    "wall_s": 1.057
+   }
+  },
+  {
+   "id": "802c34c5f05b9a0575e56afc54adc47cb80bbe0d37dad5285d538ad67d1d8016",
+   "shape": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     1,
+     7
+    ],
+    [
+     2,
+     2
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     3,
+     3
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     3,
+     5
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     4,
+     3
+    ],
+    [
+     4,
+     4
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     5,
+     4
+    ],
+    [
+     6,
+     3
+    ],
+    [
+     6,
+     4
+    ]
+   ],
+   "K": 3,
+   "mode": "Hh",
+   "blocks": [],
+   "solver": "cadical153",
+   "solver_options": {
+    "elim": 0,
+    "subsume": 0,
+    "vivify": 0,
+    "probe": 0
+   },
+   "cnf": {
+    "sha256": "c936e9322e3b06205aeea1f1f0b051658ef2ff8e61d88662c90a9f47066c0445",
+    "bytes": 31795933,
+    "vars": 404680,
+    "clauses": 1773314
+   },
+   "proof": {
+    "sha256": "07fa8c808c0058cc03e6fe4ac33b0c3329389f0a8e9d1413fa7f425fd3b71f1b",
+    "bytes": 1361347,
+    "format": "binary DRAT (CaDiCaL 1.5.3 via python-sat)"
+   },
+   "drat_trim": {
+    "result": "s VERIFIED",
+    "wall_s": 1.078
+   }
+  }
+ ]
+}

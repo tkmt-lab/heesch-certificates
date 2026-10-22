@@ -1,0 +1,275 @@
+{
+  "note": "Files whose public copy differs from the research original by exact text replacements (internal labels in comments and docstrings, local paths, Lean module and namespace names) or by the identifier map of formal/README.md. Numbers, data and proofs are unchanged. The originals are not reproduced here.",
+  "records": [
+    {
+      "original_sha256": "ed7e006b4c69c0b489201cc0890b7d377966dcf6161a9bfdca98813bb117dbcb",
+      "public": {
+        "path": "checkers/check_witness.py",
+        "sha256": "851fb6b64650f095d300468a9fb76033592e388f6fe0bcbbef0dd9cd7b90232e",
+        "bytes": 10024
+      },
+      "replacements": 1,
+      "replacement_texts": [
+        "\"\"\"Geometric check of lower-bound witnesses"
+      ]
+    },
+    {
+      "original_sha256": "c0bd04c30799f32f33bd06a190402379e181cf90bed246ed3b0b64e651928f14",
+      "public": {
+        "path": "evidence/comparator-2026-10-22.txt",
+        "sha256": "45a00af03d145fb53865cb0df54ab049eb2a2990b24acbccfd7088a3ea4375b4",
+        "bytes": 16079
+      },
+      "replacements": "identifier map only (module and namespace names)",
+      "replacement_texts": [],
+      "note": "recorded before the renaming; see VERIFICATION-RECORD.md"
+    },
+    {
+      "original_sha256": "42595b55983e461446a042aefff51af1f1b537aafa0fb8739e02ac3dea4b4a53",
+      "public": {
+        "path": "formal/Heesch/Basic.lean",
+        "sha256": "d4f91c54ebe9ff9b61a49bf1e5178101cd65a2049689b2185eb3bcf8203408e8",
+        "bytes": 10966
+      },
+      "replacements": "identifier map (see formal/README.md) + 1 comment edits",
+      "replacement_texts": [
+        "Heesch CNF soundness on three grids:"
+      ]
+    },
+    {
+      "original_sha256": "9b148b6b91b9230e18d1ed179cfada90adcd3d098067e9b18950739b95794d35",
+      "public": {
+        "path": "formal/Heesch/Cand.lean",
+        "sha256": "de34805e74a3b53235906eda355d8c5c8648cc1f2c20103c48ef9ac5a599d659",
+        "bytes": 12392
+      },
+      "replacements": "identifier map (see formal/README.md) + 1 comment edits",
+      "replacement_texts": [
+        "Heesch CNF soundness on three grids:"
+      ]
+    },
+    {
+      "original_sha256": "ba19b1aba36e59d3164feaf7ab0ffb95163b4b417cf559179a76ac1edda64641",
+      "public": {
+        "path": "formal/Heesch/Challenge.lean",
+        "sha256": "3a637f3260f784d00f7a332eb10351563bd4605b2e03458836b8a67781780d73",
+        "bytes": 28045
+      },
+      "replacements": "identifier map (see formal/README.md) + 3 comment edits",
+      "replacement_texts": [
+        "soundness of the Heesch CNF encoding on three grids",
+        "Written on 2026-10-22, before any proof, as a Comparator \"challenge\" for the soundness theorem\n(extension to polyhexes and polyiamonds).",
+        "`FORMAT.md` (§1, §1.1, §4) alone, without reading\nthe generator code (`generator/`)."
+      ]
+    },
+    {
+      "original_sha256": "2e01d56e9b58e4da0cee8cd8ff2b9286838e1885550088159a3081eca5849854",
+      "public": {
+        "path": "formal/Heesch/Inst.lean",
+        "sha256": "77c18f8b490ca1ab0bf3b3ab165c0f0fc7a633191be2464fff30758dad590b83",
+        "bytes": 19395
+      },
+      "replacements": "identifier map (see formal/README.md) + 1 comment edits",
+      "replacement_texts": [
+        "Heesch CNF soundness on three grids:"
+      ]
+    },
+    {
+      "original_sha256": "a25b64ac10204120c22c5a01fee1045db48dd21260c48923ff160d34ae8c9b35",
+      "public": {
+        "path": "formal/Heesch/Main.lean",
+        "sha256": "b61f425a7f76bc8f2e10667538fac18d596714b30dd454fb9837961ecfc1c2d0",
+        "bytes": 23804
+      },
+      "replacements": "identifier map (see formal/README.md) + 1 comment edits",
+      "replacement_texts": [
+        "Heesch CNF soundness on three grids:"
+      ]
+    },
+    {
+      "original_sha256": "61bf20421fccc951af73339d73e800515f528f5e2e925f877ecca911edfae438",
+      "public": {
+        "path": "formal/Heesch/Ord.lean",
+        "sha256": "fa2e3ecad98cb60342d0f207d6e96b23036edf67814756cadd0a04048cc50dfd",
+        "bytes": 13375
+      },
+      "replacements": "identifier map (see formal/README.md) + 1 comment edits",
+      "replacement_texts": [
+        "Heesch CNF soundness on three grids:"
+      ]
+    },
+    {
+      "original_sha256": "424741d3d6c607e72a3762e67b8594403ad1d3f371feae0f3977994508ff9d02",
+      "public": {
+        "path": "formal/Heesch/Solution.lean",
+        "sha256": "6815e14f3ab821a4745c36ef9fe3957735382217610ed69bd9b2eb394e01dc17",
+        "bytes": 3886
+      },
+      "replacements": "identifier map (see formal/README.md) + 2 comment edits",
+      "replacement_texts": [
+        "(soundness on the square, hexagon and\ntriangle grids)",
+        "Proof (2026-10-22):"
+      ]
+    },
+    {
+      "original_sha256": "02daeaa89d869c1b872b6a0e26f7f9e0137b5af49c4052be13f0b90bf8c134d7",
+      "public": {
+        "path": "formal/Heesch/Spec.lean",
+        "sha256": "a9a4c4a2ead67303df3eead4794dca972d2ebcded7bf05c583ff056244f4f3bc",
+        "bytes": 22897
+      },
+      "replacements": "identifier map (see formal/README.md) + 1 comment edits",
+      "replacement_texts": [
+        "Specification for the Heesch CNF soundness on three grids"
+      ]
+    },
+    {
+      "original_sha256": "56590440a85f8e1d9117e01881fdaa6b3aae11d02e8f749c0fa98669e8ffca16",
+      "public": {
+        "path": "formal/Heesch/Square/Basic.lean",
+        "sha256": "e546286d88d6bb0067b76bb16603e725bf23c1a6bd2d7497eaf33969b4a1bb40",
+        "bytes": 6523
+      },
+      "replacements": "identifier map (see formal/README.md) + 1 comment edits",
+      "replacement_texts": [
+        "Heesch CNF soundness (polyominoes), "
+      ]
+    },
+    {
+      "original_sha256": "6c618846440ba6bbf850284b3c7283d668a5d19944ad3b4fa0a198648df39466",
+      "public": {
+        "path": "formal/Heesch/Square/Cand.lean",
+        "sha256": "ad4bf9ae4ab08ec763cc7e1a80c22a476eee916ab91e3168203f40f47f824af6",
+        "bytes": 12686
+      },
+      "replacements": "identifier map (see formal/README.md) + 1 comment edits",
+      "replacement_texts": [
+        "Heesch CNF soundness (polyominoes), "
+      ]
+    },
+    {
+      "original_sha256": "9a735f4025763e87b864636db9a1913aaea44391d72a76b0579c15b4f966ae1e",
+      "public": {
+        "path": "formal/Heesch/Square/Geom.lean",
+        "sha256": "2c38328cb530fc06c79bc7dcdcf1a51b9e51f94f30d612196ca18092ab1a55ac",
+        "bytes": 5712
+      },
+      "replacements": "identifier map (see formal/README.md) + 1 comment edits",
+      "replacement_texts": [
+        "Heesch CNF soundness (polyominoes), "
+      ]
+    },
+    {
+      "original_sha256": "dc98eb32dd59b007a1f2000d8566474944e04cf69ca74932906095cf6140fb2c",
+      "public": {
+        "path": "formal/Heesch/Square/Ord.lean",
+        "sha256": "8cf4e488aaef64f9da37d4a2717d1b6a3acb4837bd7a7f603c1f2cb899b42f59",
+        "bytes": 6079
+      },
+      "replacements": "identifier map (see formal/README.md) + 1 comment edits",
+      "replacement_texts": [
+        "Heesch CNF soundness (polyominoes), "
+      ]
+    },
+    {
+      "original_sha256": "9a8f2ab15f7fe7a60d4d411e0457095be4bddd9c041d981c6979daba4b05af5b",
+      "public": {
+        "path": "formal/Heesch/Square/Spec.lean",
+        "sha256": "ed41e434442643060dd920bf03c61edc9a98c75ced75b3faebafa534d1b1d2a9",
+        "bytes": 15701
+      },
+      "replacements": "identifier map (see formal/README.md) + 1 comment edits",
+      "replacement_texts": [
+        "Specification for the Heesch CNF soundness (polyominoes)"
+      ]
+    },
+    {
+      "original_sha256": "e32e031778652affed774c91d8764d215340731815e78bae11deaeb5a4b6d930",
+      "public": {
+        "path": "formal/Heesch/SquareEq.lean",
+        "sha256": "e02d583b02fdf619e25403238b79ec7962d4b8b2146bb618ff89bf64bb26db78",
+        "bytes": 4210
+      },
+      "replacements": "identifier map (see formal/README.md) + 3 comment edits",
+      "replacement_texts": [
+        "Heesch CNF soundness on three grids:",
+        "So the file comparison for the 2,076 square CNFs",
+        "whose DIMACS the file comparison compared with the generator's CNFs"
+      ]
+    },
+    {
+      "original_sha256": "5d0046530055c9105619e4de7bdb51e5bd0b85cf6ef916a2dc65fbca80b7156c",
+      "public": {
+        "path": "formal/comparator.json",
+        "sha256": "4384decb389cc29850dc0912c1d7c804969c14b6f23c8ed50d5ada201f77ca3b",
+        "bytes": 389
+      },
+      "replacements": "module and theorem names mapped as in formal/README.md",
+      "replacement_texts": []
+    },
+    {
+      "original_sha256": "f0b699471ae54af378f02f9d9d1c6c86da0d07f41a11b5d408a1391d1c348859",
+      "public": {
+        "path": "generator/encode.py",
+        "sha256": "4af86bae8c6cdf4fd4e6a4f71763fd26fa53fe64a085dd9ea8517dec7b9dc4de",
+        "bytes": 11422
+      },
+      "replacements": 2,
+      "replacement_texts": [
+        "\"\"\"CNF encoding",
+        "(see FORMAT.md, section 4)"
+      ]
+    },
+    {
+      "original_sha256": "879ec11489a837b4b419454ec23dc4ea8436505e00937f279a7f9487ee80a68f",
+      "public": {
+        "path": "generator/grids.py",
+        "sha256": "a797e8de0e485b0d2371384cbd6e9198bfe478e25b15f205b0324b436b1c0de1",
+        "bytes": 7267
+      },
+      "replacements": 1,
+      "replacement_texts": [
+        "\"\"\"The ambient grids"
+      ]
+    },
+    {
+      "original_sha256": "77136f6d423209256b541b479bda5dab39cd4aaa32fc4f42e5861c5a25d7ff9b",
+      "public": {
+        "path": "generator/heesch.py",
+        "sha256": "8a9a1cc6bfdfce79e48f67f4578c19ad9371a10c9f8619869b56fb903d54b31f",
+        "bytes": 13625
+      },
+      "replacements": 3,
+      "replacement_texts": [
+        "\"\"\"Heesch numbers",
+        "ROOT = os.path.dirname(HERE)\nDRAT_TRIM = os.environ.get('DRAT_TRIM', os.path.join(ROOT, 'tools', 'drat-trim', 'drat-trim'))",
+        "    # cap_mb is not enforced here; limit memory outside (ulimit, container).  cap_s is a timeout.\n    p = subprocess.run([DRAT_TRIM, cnf, drat, '-t', str(tlimit)], capture_output=True, text=True,\n                       timeout=cap_s)"
+      ],
+      "note": "the original ran drat-trim through a local memory-capping wrapper; the public copy calls it directly"
+    },
+    {
+      "original_sha256": "d3b145ee73b1e2604d908300d8255f925a6b0f809174bfc446ff3c4abdbfea60",
+      "public": {
+        "path": "search/search.py",
+        "sha256": "f0a589b14adb0a20706c3e5d521418d0010df2a0025dbc092bc0350f7adeac8f",
+        "bytes": 26039
+      },
+      "replacements": 12,
+      "replacement_texts": [
+        "\"\"\"Restricted search for finite-Hh=4 polyominoes (Section 10 of the article).\n\ngenerate: build the candidate list from the five Hh=3 polyominoes (witnesses/omino) and Kaplan's\n19omino_2up.txt (fetch_inputs.py); `python3 -B search/search.py generate --inputs DIR` writes\ncandidates.jsonl and generation.json to $SEARCH_OUTPUT (default ./search-output).\none/search/controls: the SAT screening and periodic-tiling search (uses generator/).\n\"\"\"",
+        "ROOT = Path(__file__).resolve().parent.parent  # packet root\n# All outputs (candidates, generation record, attempt records, runtime/) go to SEARCH_OUTPUT.\nB = Path(os.environ.get('SEARCH_OUTPUT', 'search-output')).resolve()\nB.mkdir(parents=True, exist_ok=True)\nsys.path[:0] = [str(ROOT / 'checkers'), str(ROOT / 'generator')]",
+        "SALT = bytes.fromhex('523031332d422d32303236313032322d7631').decode()  # the original run's fixed salt, unchanged",
+        "SOURCE_NAMES = ('encode.py', 'heesch.py', 'grids.py', 'check_witness.py')\n\n\ndef src_path(name):\n    return ROOT / ('checkers' if name == 'check_witness.py' else 'generator') / name",
+        "sorted((ROOT / 'witnesses/omino').glob('*.jsonl'))",
+        "    manifest = dict(files=[dict(f, path=f['family'] + '/' + f['name']) for f in\n                           json.loads((ROOT / 'inputs/kaplan-files.json').read_text())['files'] if f['family'] == 'omino'])\n",
+        "        path = Path(args.inputs) / item['path']",
+        "    path = Path(args.inputs) / 'omino/19omino_2up.txt'",
+        "source_code_sha256={n: sha(src_path(n)) for n in SOURCE_NAMES}",
+        "source_code_sha256={n:sha(src_path(n)) for n in SOURCE_NAMES}",
+        "    # The original runs used a local wrapper capping memory (1600 MB) and time (budget s); exit codes 124/137\n    # meant timeout/memory kill. Set SEARCH_CAP to an equivalent command prefix (empty: no cap).\n    command = ['nice', '-n', '15', *os.environ.get('SEARCH_CAP', '').split(),\n",
+        "g.add_argument('--inputs', required=True)"
+      ],
+      "note": "paths and the capping wrapper replaced; candidate generation unchanged (re-run reproduces the candidate SHA-256)"
+    }
+  ]
+}

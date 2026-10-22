@@ -1,0 +1,30 @@
+{
+  "message": "Cite the article and the exact packet version.",
+  "title": "Heesch numbers with SAT certificates and a Lean-verified encoding",
+  "type": "software",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "family-names": "Takimoto",
+      "given-names": "Tatsuhiko",
+      "affiliation": "Independent researcher"
+    }
+  ],
+  "license": "Apache-2.0",
+  "cff-version": "1.2.0",
+  "repository-code": "https://github.com/tkmt-lab/heesch-certificates",
+  "preferred-citation": {
+    "type": "article",
+    "title": "Heesch numbers and maximal coronas of small polyforms with certificates and a Lean-verified SAT encoding",
+    "authors": [
+      {
+        "family-names": "Takimoto",
+        "given-names": "Tatsuhiko",
+        "affiliation": "Independent researcher"
+      }
+    ],
+    "version": "2.1",
+    "license": "CC-BY-4.0",
+    "url": "https://github.com/tkmt-lab/heesch-certificates"
+  }
+}

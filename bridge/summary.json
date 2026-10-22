@@ -1,0 +1,47 @@
+{
+ "criterion": "The checked DIMACS file, renamed by a bijection of positive variables, and the transcription of the Lean cnfOrd with the recovered counter orders have the same multiset of clauses, each clause compared as a multiset of literals (no merging of duplicates, no simplification, no sign flips).",
+ "totals": {
+  "hexagonal": {
+   "cnfs": 537,
+   "variables": 39687752,
+   "clauses": 168537425,
+   "K=3": 102,
+   "K=2": 326,
+   "K=1": 75,
+   "K=4": 19,
+   "K=5": 15
+  },
+  "square": {
+   "cnfs": 2076,
+   "variables": 45711523,
+   "clauses": 178454670,
+   "K=2": 1218,
+   "K=1": 829,
+   "K=3": 24,
+   "K=4": 5
+  },
+  "triangular": {
+   "cnfs": 2406,
+   "variables": 48014519,
+   "clauses": 191702313,
+   "K=2": 1240,
+   "K=1": 1117,
+   "K=3": 44,
+   "K=5": 2,
+   "K=4": 3
+  }
+ },
+ "lean_byte_comparisons": {
+  "square": 30,
+  "hexagonal_and_triangular": 34
+ },
+ "triangular_hole_points_all_cells": 6922,
+ "blocks_valid": {
+  "square": 7267,
+  "hexagonal": 2126,
+  "triangular": 3894
+ },
+ "hexagonal_triangular_audit_status": "PASS",
+ "programs": "The transcription, order-recovery and comparison programs are not part of this packet; their SHA-256 at the time of the runs are recorded in the original records.",
+ "rows": "file-comparison.jsonl.gz: one row per checked CNF; producer_sha256 equals the CNF SHA-256 of the certificate record"
+}

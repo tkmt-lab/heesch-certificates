@@ -1,0 +1,3 @@
+Code (*.py, *.sh, *.lean, the CI workflow and the Lean project files): Apache-2.0 (Apache-2.0.txt).
+Article, original text and generated data (JSON, JSONL, Markdown, TeX, PDF): CC BY 4.0 (CC-BY-4.0.txt).
+Kaplan's dataset files are not redistributed (inputs/kaplan-files.json identifies them). Cited works are not redistributed.

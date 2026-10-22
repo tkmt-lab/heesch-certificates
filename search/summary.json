@@ -1,0 +1,103 @@
+{
+  "total_candidates": 3442,
+  "handled_distinct": 3442,
+  "classification": {
+    "K3_UNSAT": 1351,
+    "periodic_tiler": 576,
+    "K1_UNSAT": 1515
+  },
+  "by_cells": {
+    "20": {
+      "K3_UNSAT": 770,
+      "periodic_tiler": 488,
+      "K1_UNSAT": 962
+    },
+    "21": {
+      "K3_UNSAT": 56,
+      "periodic_tiler": 11,
+      "K1_UNSAT": 38
+    },
+    "22": {
+      "K3_UNSAT": 85,
+      "periodic_tiler": 10,
+      "K1_UNSAT": 53
+    },
+    "23": {
+      "K3_UNSAT": 102,
+      "periodic_tiler": 4,
+      "K1_UNSAT": 76
+    },
+    "24": {
+      "K3_UNSAT": 57,
+      "periodic_tiler": 22,
+      "K1_UNSAT": 57
+    },
+    "25": {
+      "K3_UNSAT": 95,
+      "K1_UNSAT": 107,
+      "periodic_tiler": 8
+    },
+    "26": {
+      "K3_UNSAT": 69,
+      "periodic_tiler": 15,
+      "K1_UNSAT": 70
+    },
+    "27": {
+      "K3_UNSAT": 65,
+      "periodic_tiler": 10,
+      "K1_UNSAT": 90
+    },
+    "28": {
+      "K3_UNSAT": 52,
+      "periodic_tiler": 8,
+      "K1_UNSAT": 62
+    }
+  },
+  "by_primary_family": {
+    "grow19": {
+      "K3_UNSAT": 583,
+      "K1_UNSAT": 598,
+      "periodic_tiler": 340
+    },
+    "grow_H3": {
+      "K3_UNSAT": 130,
+      "K1_UNSAT": 342,
+      "periodic_tiler": 140
+    },
+    "inflate": {
+      "K3_UNSAT": 4
+    },
+    "strip": {
+      "K3_UNSAT": 74,
+      "periodic_tiler": 8
+    },
+    "strip2": {
+      "periodic_tiler": 88,
+      "K3_UNSAT": 560,
+      "K1_UNSAT": 575
+    }
+  },
+  "solver_instances_by_K": {
+    "1": {
+      "UNSAT": 1515,
+      "SAT": 1488
+    },
+    "3": {
+      "UNSAT": 1351,
+      "SAT": 511
+    },
+    "4": {
+      "SAT": 1
+    },
+    "5": {
+      "SAT": 1
+    }
+  },
+  "largest_completed_worker_rss_mib": 1049.703,
+  "supervisor_wall_seconds_sum": 6041.955,
+  "attempts_rows": 3954,
+  "candidate_sha256": "5fb662257aaccbedeb699bfa966ba128b4a41cf9e52704875622ac579b6817ab",
+  "first_solver_utc": "2026-10-22T12:01:02.422956+00:00",
+  "last_solver_utc": "2026-10-22T12:57:47.445432+00:00",
+  "scientific_scope": "UNSAT rows have no proof logs unless separately stated; no non-tiling conclusion from a missing periodic tiling"
+}

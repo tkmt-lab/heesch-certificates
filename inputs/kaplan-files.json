@@ -1,0 +1,418 @@
+{
+ "source": "Craig S. Kaplan, Heesch Numbers of Unmarked Polyforms, dataset (2021), https://cs.uwaterloo.ca/~csk/heesch/",
+ "retrieved": "2026-10-20 (polyominoes) and 2026-10-20/22 (polyhexes, polyiamonds); hashes recomputed 2026-10-22",
+ "terms": "No licence is stated on the dataset page. The files are not redistributed here; fetch_inputs.py downloads them from the original URLs and checks these hashes.",
+ "not_available": "16-hex is the largest polyhex file used; the 17-hex file returned HTTP 403 when retrieved, so polyhexes with 17 or more cells are outside the selection. Kaplan's census has no non-tiling 8-iamonds.",
+ "files": [
+  {
+   "grid": "hexagonal",
+   "family": "hex",
+   "name": "06hex_0up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/hex/06hex_0up.txt",
+   "bytes": 170,
+   "sha256": "95cb3debe854219fbf4055f69cad103f98cbfdfdf284334232fe831ac20ac909",
+   "shapes": 4,
+   "role": "selected"
+  },
+  {
+   "grid": "hexagonal",
+   "family": "hex",
+   "name": "07hex_0up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/hex/07hex_0up.txt",
+   "bytes": 1743,
+   "sha256": "58581a3b1373c1bad398c18933a194b68d8a8d4b0fa93df38f8a869db9111c21",
+   "shapes": 37,
+   "role": "selected"
+  },
+  {
+   "grid": "hexagonal",
+   "family": "hex",
+   "name": "08hex_0up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/hex/08hex_0up.txt",
+   "bytes": 19610,
+   "sha256": "06d27191e1a6a681f2f8dfefddada718cbbad5402aeec37be149cd88a4d06a92",
+   "shapes": 381,
+   "role": "selected"
+  },
+  {
+   "grid": "hexagonal",
+   "family": "hex",
+   "name": "09hex_2up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/hex/09hex_2up.txt",
+   "bytes": 10706,
+   "sha256": "3742a80f630a4e483a942e037a4a8e2686550a9a5bba4a63816fa9d5123b4c2a",
+   "shapes": 192,
+   "role": "searched"
+  },
+  {
+   "grid": "hexagonal",
+   "family": "hex",
+   "name": "10hex_2up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/hex/10hex_2up.txt",
+   "bytes": 40215,
+   "sha256": "cff323cbce3a0054f0fd97195833fb7faaaa217efde2af898f19279ee33479d0",
+   "shapes": 662,
+   "role": "selected"
+  },
+  {
+   "grid": "hexagonal",
+   "family": "hex",
+   "name": "11hex_3up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/hex/11hex_3up.txt",
+   "bytes": 5178,
+   "sha256": "18e759499fef3f4e8beca5cd8114ecfe18cfab153d5c8a5a34bf09f6c29c04a5",
+   "shapes": 79,
+   "role": "selected"
+  },
+  {
+   "grid": "hexagonal",
+   "family": "hex",
+   "name": "12hex_3up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/hex/12hex_3up.txt",
+   "bytes": 2438,
+   "sha256": "12763a4be3fdcf3417f29ff06c0c96434c2e6801e6d672aa1f87c75b02ae90e7",
+   "shapes": 34,
+   "role": "selected"
+  },
+  {
+   "grid": "hexagonal",
+   "family": "hex",
+   "name": "13hex_3up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/hex/13hex_3up.txt",
+   "bytes": 3849,
+   "sha256": "219f439cf11ec7e2a36ccb62e61b93591c9a5a394b0b9cb94d2f3ff7ab03aac5",
+   "shapes": 52,
+   "role": "selected"
+  },
+  {
+   "grid": "hexagonal",
+   "family": "hex",
+   "name": "14hex_3up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/hex/14hex_3up.txt",
+   "bytes": 3604,
+   "sha256": "b4a2f9a460455854ec24a7cb91f1e784b38dea9f50cb2e31a8a7840ed062b64d",
+   "shapes": 46,
+   "role": "searched"
+  },
+  {
+   "grid": "hexagonal",
+   "family": "hex",
+   "name": "15hex_3up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/hex/15hex_3up.txt",
+   "bytes": 27521,
+   "sha256": "2e2975a9aa8130aabb44155cb8214b9df34d83189a8421855d49c131b8cc7f1f",
+   "shapes": 324,
+   "role": "selected"
+  },
+  {
+   "grid": "hexagonal",
+   "family": "hex",
+   "name": "16hex_3up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/hex/16hex_3up.txt",
+   "bytes": 13715,
+   "sha256": "cee2e3ef029fbd8a603f489835265e2f2077a75908423c539384e2e3cd259aa0",
+   "shapes": 158,
+   "role": "selected"
+  },
+  {
+   "grid": "triangular",
+   "family": "iamond",
+   "name": "07iamond_0up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/iamond/07iamond_0up.txt",
+   "bytes": 54,
+   "sha256": "54e48cc478e7f32518faa8f6de659ad359eac825d33d49ce3ba81c50de7139a7",
+   "shapes": 1,
+   "role": "selected"
+  },
+  {
+   "grid": "triangular",
+   "family": "iamond",
+   "name": "09iamond_0up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/iamond/09iamond_0up.txt",
+   "bytes": 1231,
+   "sha256": "8ce32aa942e7353844b9a9a980ab01c907cb7e2b91e89714011cde08aeceeb83",
+   "shapes": 20,
+   "role": "selected"
+  },
+  {
+   "grid": "triangular",
+   "family": "iamond",
+   "name": "10iamond_0up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/iamond/10iamond_0up.txt",
+   "bytes": 6842,
+   "sha256": "5a9b3d8403ef18eb0bd228838ff1f3e89cc6447a54c34c2731d0acd32915d5e0",
+   "shapes": 103,
+   "role": "selected"
+  },
+  {
+   "grid": "triangular",
+   "family": "iamond",
+   "name": "11iamond_0up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/iamond/11iamond_0up.txt",
+   "bytes": 42306,
+   "sha256": "47b4a8542004acee24fcf285e4f9ceb3a728f7952c96b976edfe64d4c06b36ae",
+   "shapes": 594,
+   "role": "selected"
+  },
+  {
+   "grid": "triangular",
+   "family": "iamond",
+   "name": "12iamond_0up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/iamond/12iamond_0up.txt",
+   "bytes": 90773,
+   "sha256": "53f172ae17af653e0e2e1ff09d0f47798833fcc79369525199a3d861e9d68d28",
+   "shapes": 1192,
+   "role": "selected"
+  },
+  {
+   "grid": "triangular",
+   "family": "iamond",
+   "name": "13iamond_2up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/iamond/13iamond_2up.txt",
+   "bytes": 4310,
+   "sha256": "833a039aa1cde79570751a0528034a497b76afa1a61a8e0852b584d1833dd72a",
+   "shapes": 53,
+   "role": "searched"
+  },
+  {
+   "grid": "triangular",
+   "family": "iamond",
+   "name": "14iamond_2up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/iamond/14iamond_2up.txt",
+   "bytes": 2106,
+   "sha256": "1f5badedd1b8fad6a183feb767792e019dc6f7f6714d5a8927a99783d984481c",
+   "shapes": 25,
+   "role": "searched"
+  },
+  {
+   "grid": "triangular",
+   "family": "iamond",
+   "name": "15iamond_2up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/iamond/15iamond_2up.txt",
+   "bytes": 8756,
+   "sha256": "fe6e2d79473169cfc2271bbb33766acc270257782111e9e5a5f6f02eef8e70a0",
+   "shapes": 95,
+   "role": "searched"
+  },
+  {
+   "grid": "triangular",
+   "family": "iamond",
+   "name": "16iamond_2up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/iamond/16iamond_2up.txt",
+   "bytes": 3531,
+   "sha256": "f7dc2e6648e4e2c0798003d5187d549bc85631f72863a7222bb074774c833107",
+   "shapes": 36,
+   "role": "searched"
+  },
+  {
+   "grid": "triangular",
+   "family": "iamond",
+   "name": "17iamond_2up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/iamond/17iamond_2up.txt",
+   "bytes": 17875,
+   "sha256": "c1017ef88eaa46048eb9ada1b95df3346f3f16939e99bee1f2d720af450fb0c1",
+   "shapes": 175,
+   "role": "searched"
+  },
+  {
+   "grid": "triangular",
+   "family": "iamond",
+   "name": "18iamond_2up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/iamond/18iamond_2up.txt",
+   "bytes": 8802,
+   "sha256": "817f7ba25b78c229350e277e38a67e7bb1d5bd5d76079867ff4fd710d6a99b5e",
+   "shapes": 81,
+   "role": "searched"
+  },
+  {
+   "grid": "triangular",
+   "family": "iamond",
+   "name": "19iamond_2up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/iamond/19iamond_2up.txt",
+   "bytes": 18118,
+   "sha256": "bcdb6d4d25725657c54b876dead3fd3a2dfbb4c53444e1ee8c5f6438524e9308",
+   "shapes": 159,
+   "role": "searched"
+  },
+  {
+   "grid": "triangular",
+   "family": "iamond",
+   "name": "20iamond_2up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/iamond/20iamond_2up.txt",
+   "bytes": 16934,
+   "sha256": "ab1ad90241e1147179b4c2d439195293698ffb09e273e043950bbed269079da4",
+   "shapes": 142,
+   "role": "selected"
+  },
+  {
+   "grid": "triangular",
+   "family": "iamond",
+   "name": "21iamond_2up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/iamond/21iamond_2up.txt",
+   "bytes": 22493,
+   "sha256": "e686dce19436ba34b83d760ef9d5d31468eec86df8f1ddc7ce29adfb53182c7f",
+   "shapes": 178,
+   "role": "searched"
+  },
+  {
+   "grid": "triangular",
+   "family": "iamond",
+   "name": "22iamond_2up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/iamond/22iamond_2up.txt",
+   "bytes": 19413,
+   "sha256": "f759881bd7e58dbf7a8faa0c79613a33cb941d872200d0aac4766e3d864c50e7",
+   "shapes": 149,
+   "role": "searched"
+  },
+  {
+   "grid": "triangular",
+   "family": "iamond",
+   "name": "23iamond_2up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/iamond/23iamond_2up.txt",
+   "bytes": 47526,
+   "sha256": "272b0ad6f2275a96c1871109b5b73ec02c0b9e68ae29c62572f217a21c86ba84",
+   "shapes": 346,
+   "role": "searched"
+  },
+  {
+   "grid": "triangular",
+   "family": "iamond",
+   "name": "24iamond_2up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/iamond/24iamond_2up.txt",
+   "bytes": 74442,
+   "sha256": "c33dc3c746b5f75248c692dfac6c2552f55711e45bdb1841b884741eed575f6d",
+   "shapes": 524,
+   "role": "searched"
+  },
+  {
+   "grid": "square",
+   "family": "omino",
+   "name": "07omino_0up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/omino/07omino_0up.txt",
+   "bytes": 126,
+   "sha256": "f9d47697ebb5aded7ccfff8f996dac4e2da89a6d21637b88df6b709faf673790",
+   "shapes": 3,
+   "role": "selected"
+  },
+  {
+   "grid": "square",
+   "family": "omino",
+   "name": "08omino_0up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/omino/08omino_0up.txt",
+   "bytes": 920,
+   "sha256": "befbb2df9d0f645df299f1d720e7a8c52c5ee856353215ac8c42dc34a5605b73",
+   "shapes": 20,
+   "role": "selected"
+  },
+  {
+   "grid": "square",
+   "family": "omino",
+   "name": "09omino_0up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/omino/09omino_0up.txt",
+   "bytes": 9900,
+   "sha256": "8eb187e1f6cb546df071b72b7c8566d76138b627a2b3910327ccb27afada8352",
+   "shapes": 198,
+   "role": "selected"
+  },
+  {
+   "grid": "square",
+   "family": "omino",
+   "name": "10omino_0up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/omino/10omino_0up.txt",
+   "bytes": 75060,
+   "sha256": "b01cd3345930c0c69db7c884aea0659601c3c846ec38adc4f358676a282d3ad6",
+   "shapes": 1390,
+   "role": "selected"
+  },
+  {
+   "grid": "square",
+   "family": "omino",
+   "name": "11omino_2up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/omino/11omino_2up.txt",
+   "bytes": 6380,
+   "sha256": "7b9094e96bef077d8ac7f3fd24b47d765e538b516f3c045997c8112047f83896",
+   "shapes": 110,
+   "role": "selected"
+  },
+  {
+   "grid": "square",
+   "family": "omino",
+   "name": "12omino_2up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/omino/12omino_2up.txt",
+   "bytes": 2542,
+   "sha256": "514cf3ed2ed7b4aafd4f04690c5635c5f53a5071d70cfb80d97b3e25e248c03d",
+   "shapes": 41,
+   "role": "searched"
+  },
+  {
+   "grid": "square",
+   "family": "omino",
+   "name": "13omino_2up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/omino/13omino_2up.txt",
+   "bytes": 14520,
+   "sha256": "2c59e37137b0a90008eef2070147e7de9cdfb4b95f1056613bd940d16910ea35",
+   "shapes": 220,
+   "role": "selected"
+  },
+  {
+   "grid": "square",
+   "family": "omino",
+   "name": "14omino_2up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/omino/14omino_2up.txt",
+   "bytes": 14140,
+   "sha256": "29d3880f273f8f83bb7b0c8b15afb5022f6652a9175bd2d91cbcf2025d05c615",
+   "shapes": 202,
+   "role": "searched"
+  },
+  {
+   "grid": "square",
+   "family": "omino",
+   "name": "15omino_2up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/omino/15omino_2up.txt",
+   "bytes": 12137,
+   "sha256": "712e50bf241fa7b3309b5e0bc43f1c917c518e6b39b97edb98abdd70b5a878cc",
+   "shapes": 164,
+   "role": "searched"
+  },
+  {
+   "grid": "square",
+   "family": "omino",
+   "name": "16omino_2up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/omino/16omino_2up.txt",
+   "bytes": 23816,
+   "sha256": "ce6d1545e7fbf22c6dfdea4aab3512699fa7a20f9a7e4eba485805f6f6fd5f46",
+   "shapes": 305,
+   "role": "searched"
+  },
+  {
+   "grid": "square",
+   "family": "omino",
+   "name": "17omino_2up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/omino/17omino_2up.txt",
+   "bytes": 43419,
+   "sha256": "372be54f53004689cd29c647429199d9cfde9d5752af75108d58caa14efc5501",
+   "shapes": 528,
+   "role": "selected"
+  },
+  {
+   "grid": "square",
+   "family": "omino",
+   "name": "18omino_2up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/omino/18omino_2up.txt",
+   "bytes": 27943,
+   "sha256": "51fe41e344460c156adb0aca67e90cf1495b535365629f274d82e6dba444d2e3",
+   "shapes": 324,
+   "role": "searched"
+  },
+  {
+   "grid": "square",
+   "family": "omino",
+   "name": "19omino_2up.txt",
+   "url": "https://cs.uwaterloo.ca/~csk/heesch/omino/19omino_2up.txt",
+   "bytes": 69254,
+   "sha256": "d390b87d0f4fd34422707e0d5b008196c4eabac16fba413e52cb5a9fdb3d268c",
+   "shapes": 767,
+   "role": "searched; parents of the restricted search"
+  }
+ ]
+}

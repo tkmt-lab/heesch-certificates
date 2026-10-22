@@ -1,0 +1,1539 @@
+{
+ "conventions": "Configurations are sets of (layer, copy) pairs, copies as cell sets; identified only under the central stabilizer G(S), which is trivial for all 22 shapes; prefix counts N_j count the restrictions to layers <= j of maximal k-coronas (extendable prefixes only); the last entry is N_k.",
+ "implementations": "first: SAT enumeration of inner parts by blocking the selected inner placements, outer completions counted by a memoised exact-cover search; second: written separately from the same specification, blocks the complete signed inner assignment and counts outer completions with its own candidate generation and disc tests. Shared: CNF generator, hole clauses, grid definitions, geometric checker.",
+ "rows": [
+  {
+   "case": "hex-10hex_2up-13-Hh",
+   "family": "hex",
+   "grid": "hexagonal",
+   "file": "10hex_2up.txt",
+   "index": 13,
+   "cells": 10,
+   "Hc": 3,
+   "Hh": 4,
+   "variant": "Hh",
+   "k": 4,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 3,
+     "2": 3,
+     "3": 9
+    },
+    "inner_parts": 9,
+    "total": 768724,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "a47e9d5ff5d109babddcf20255611148cba3aa511d8952dd96849def43b60f11",
+     "cnf_bytes": 18022184,
+     "proof_sha256": "5b4884aaa8b425aeeffb04f5b5a27cf56bb3fb5a2d92ecda78dbcaeeaec1150b",
+     "proof_bytes": 319230110,
+     "drat_trim": "s VERIFIED"
+    },
+    "full_enumeration": null,
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 3,
+     "2": 3,
+     "3": 9
+    },
+    "inner_parts": 9,
+    "total": 768724,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "7f4227d317f12153dd2fe3e1c60eeeefa21bd8966748355298473bab9bd62878",
+     "cnf_bytes": 18475028,
+     "proof_sha256": "dc482d5866e552f87af807f52bbd29a0eae617aa7d45f607153a05031640557e",
+     "proof_bytes": 371300557,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 28,
+    "outer_max": 683584
+   }
+  },
+  {
+   "case": "hex-11hex_3up-18-Hc",
+   "family": "hex",
+   "grid": "hexagonal",
+   "file": "11hex_3up.txt",
+   "index": 18,
+   "cells": 11,
+   "Hc": 4,
+   "Hh": 4,
+   "variant": "Hc",
+   "k": 4,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1,
+     "3": 2
+    },
+    "inner_parts": 2,
+    "total": 57,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "9343a8b9c9be7484ac80c5721814d45f864e345ebcd5d8fab3b51d15400735d3",
+     "cnf_bytes": 22690891,
+     "proof_sha256": "f12c1f05e8a7f152eb0688b6add63d60cba439f7539845e07ac8944e3276f96f",
+     "proof_bytes": 32417183,
+     "drat_trim": "s VERIFIED"
+    },
+    "full_enumeration": {
+     "total": 57,
+     "proof": {
+      "cnf_sha256": "11fa966ed72cf93745b31357009f3fce1aa86f18eb4decb9cbfe0bc01acdfdaa",
+      "cnf_bytes": 22713808,
+      "proof_sha256": "f272ba3aee111ad3733984de1683776ccd1d577dd44e52d242bf6cfcd8b9386d",
+      "proof_bytes": 44619962,
+      "drat_trim": "s VERIFIED"
+     }
+    },
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1,
+     "3": 2
+    },
+    "inner_parts": 2,
+    "total": 57,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "1c7a72b97700f8230475aa987f802f19fd06ce9bf735492501480bde627b2c24",
+     "cnf_bytes": 22805665,
+     "proof_sha256": "880278e81e582d0d853ecd10e9e2f8c38eb6df1a24e3c364a381696dc880cc2b",
+     "proof_bytes": 31656106,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 21,
+    "outer_max": 36
+   }
+  },
+  {
+   "case": "hex-11hex_3up-18-Hh",
+   "family": "hex",
+   "grid": "hexagonal",
+   "file": "11hex_3up.txt",
+   "index": 18,
+   "cells": 11,
+   "Hc": 4,
+   "Hh": 4,
+   "variant": "Hh",
+   "k": 4,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1,
+     "3": 5
+    },
+    "inner_parts": 5,
+    "total": 20610,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "5e0b925786b38dae4dd848ed52c215deeaf89e9fcf4be8a083a4c674320b05e8",
+     "cnf_bytes": 22690802,
+     "proof_sha256": "40a26035c798267b31be3ff52707700e7898fdf44420ff48c76a1ae619e8fc00",
+     "proof_bytes": 40671473,
+     "drat_trim": "s VERIFIED"
+    },
+    "full_enumeration": null,
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1,
+     "3": 5
+    },
+    "inner_parts": 5,
+    "total": 20610,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "d97a56be259e2d678cecb01377921ce011d9e237eba4cce5fda07f292f12cefb",
+     "cnf_bytes": 22977492,
+     "proof_sha256": "b3a8f01c871b0a3fa99591a1fa8b26b7c4382be8278d721829c6e9b676edd3d6",
+     "proof_bytes": 36096881,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 117,
+    "outer_max": 14720
+   }
+  },
+  {
+   "case": "hex-11hex_3up-20-Hh",
+   "family": "hex",
+   "grid": "hexagonal",
+   "file": "11hex_3up.txt",
+   "index": 20,
+   "cells": 11,
+   "Hc": 3,
+   "Hh": 4,
+   "variant": "Hh",
+   "k": 4,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1,
+     "3": 2
+    },
+    "inner_parts": 2,
+    "total": 45923328,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "81edf7a7410a375052f8a323b256fa2c14eb9899a9f31ef1c778b02eeb001f38",
+     "cnf_bytes": 29120573,
+     "proof_sha256": "22350b333b6a60d984fadef28299fba6137d31a1cde3b0a4be3e65a76c451068",
+     "proof_bytes": 54434974,
+     "drat_trim": "s VERIFIED"
+    },
+    "full_enumeration": null,
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1,
+     "3": 2
+    },
+    "inner_parts": 2,
+    "total": 45923328,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "66f35cee4d0eebb68294551d9d1393f272eae208c557405407297b0e2859db0a",
+     "cnf_bytes": 29268006,
+     "proof_sha256": "9e8810aa147e67dcd8db4219090ee464c16d0706cab5c042c49b102d11cdb7e9",
+     "proof_bytes": 65019497,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 18044928,
+    "outer_max": 27878400
+   }
+  },
+  {
+   "case": "hex-11hex_3up-30-Hh",
+   "family": "hex",
+   "grid": "hexagonal",
+   "file": "11hex_3up.txt",
+   "index": 30,
+   "cells": 11,
+   "Hc": 3,
+   "Hh": 4,
+   "variant": "Hh",
+   "k": 4,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 3,
+     "2": 6,
+     "3": 51
+    },
+    "inner_parts": 51,
+    "total": 60618972,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "7cc723e0ce63c5e5778b1ef81d6b0bd050c6962a9c4579a63deac1432ae981ed",
+     "cnf_bytes": 26822568,
+     "proof_sha256": "f3e24754fc58efa7ae92f6be6b1fb84ac52d3fdfa7a29c57f50054f0f95db788",
+     "proof_bytes": 517710541,
+     "drat_trim": "s VERIFIED"
+    },
+    "full_enumeration": null,
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 3,
+     "2": 6,
+     "3": 51
+    },
+    "inner_parts": 51,
+    "total": 60618972,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "afbe690b4a1fd14c39a34b042d09da13b170b2f9497b1063e0f13ad5e3aa4848",
+     "cnf_bytes": 30301653,
+     "proof_sha256": "8e68f304b84dcbf5c1c0cba37dc331da4fcbbf1dde4e0c0c2e8771a308b78356",
+     "proof_bytes": 590747794,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 1404,
+    "outer_max": 9975450
+   }
+  },
+  {
+   "case": "hex-11hex_3up-32-Hh",
+   "family": "hex",
+   "grid": "hexagonal",
+   "file": "11hex_3up.txt",
+   "index": 32,
+   "cells": 11,
+   "Hc": 3,
+   "Hh": 4,
+   "variant": "Hh",
+   "k": 4,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 2,
+     "2": 2,
+     "3": 7
+    },
+    "inner_parts": 7,
+    "total": 7030233087,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "a230c62b826f0d25cf6f197656a70e7f3a95860e31d9a8d1a4001587b6d7b44f",
+     "cnf_bytes": 37977431,
+     "proof_sha256": "fde442d03ce28f64a1ac11428b5707eb5cc788d9965db23707c04466cc793ee0",
+     "proof_bytes": 155455725,
+     "drat_trim": "s VERIFIED"
+    },
+    "full_enumeration": null,
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 2,
+     "2": 2,
+     "3": 7
+    },
+    "inner_parts": 7,
+    "total": 7030233087,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "822b7019262718c570f4af7ef669d6168b800ab505df651038848cf5640508c2",
+     "cnf_bytes": 38637550,
+     "proof_sha256": "8d035798a58800e3c75c0ba1f5f5182cf76a7bb83aaa21d40f5708afd6912936",
+     "proof_bytes": 173092319,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 4596,
+    "outer_max": 7029620442
+   }
+  },
+  {
+   "case": "hex-11hex_3up-37-Hh",
+   "family": "hex",
+   "grid": "hexagonal",
+   "file": "11hex_3up.txt",
+   "index": 37,
+   "cells": 11,
+   "Hc": 3,
+   "Hh": 4,
+   "variant": "Hh",
+   "k": 4,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1,
+     "3": 1
+    },
+    "inner_parts": 1,
+    "total": 1581552,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "c3e85cbd5312af00aad4bb8120ff37e6d44af0e3e2e02ae789d46308b07ed925",
+     "cnf_bytes": 28166262,
+     "proof_sha256": "82f9abf28a3df885ac5cdd3c5102682e1dac018c3ea696f7065a7e7a47ad4d18",
+     "proof_bytes": 46566252,
+     "drat_trim": "s VERIFIED"
+    },
+    "full_enumeration": null,
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1,
+     "3": 1
+    },
+    "inner_parts": 1,
+    "total": 1581552,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "53b500e38c0a045e88b97748b7ec9983ca52f00c28a463a0c018d16561d00667",
+     "cnf_bytes": 28237942,
+     "proof_sha256": "4a0e90a7ddd3be9400c3c5fe4bf1ce6dbe440dfb7db4f3e0c08f7d48ed9fc651",
+     "proof_bytes": 20038063,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 1581552,
+    "outer_max": 1581552
+   }
+  },
+  {
+   "case": "hex-11hex_3up-59-Hh",
+   "family": "hex",
+   "grid": "hexagonal",
+   "file": "11hex_3up.txt",
+   "index": 59,
+   "cells": 11,
+   "Hc": 3,
+   "Hh": 4,
+   "variant": "Hh",
+   "k": 4,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1,
+     "3": 2
+    },
+    "inner_parts": 2,
+    "total": 2303840,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "b9ef13bf7d05bb2f1bfc1f2ab734e600e0821dad6dc080a192b1256cb6496a2b",
+     "cnf_bytes": 31271135,
+     "proof_sha256": "5faf30088a44d2d2e43aeb6c12dd6c539bb8b85630243d1df80499768979b956",
+     "proof_bytes": 81437271,
+     "drat_trim": "s VERIFIED"
+    },
+    "full_enumeration": null,
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1,
+     "3": 2
+    },
+    "inner_parts": 2,
+    "total": 2303840,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "2294d98948654aeef860a25c9edc97b9f3bc33f0a8d303b03f2af166e1b50647",
+     "cnf_bytes": 31428885,
+     "proof_sha256": "f5f96505af073acf78102fc2810cb4498f2b12e924a8e722d9928c834be6e838",
+     "proof_bytes": 85549722,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 58080,
+    "outer_max": 2245760
+   }
+  },
+  {
+   "case": "hex-12hex_3up-5-Hh",
+   "family": "hex",
+   "grid": "hexagonal",
+   "file": "12hex_3up.txt",
+   "index": 5,
+   "cells": 12,
+   "Hc": 3,
+   "Hh": 4,
+   "variant": "Hh",
+   "k": 4,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 4,
+     "2": 12,
+     "3": 480
+    },
+    "inner_parts": 480,
+    "total": 6566213760,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "a70548cf1ccc52f370e2fd6c9f20f926d5c6025778ae5be96071916c2f813ff3",
+     "cnf_bytes": 32758687,
+     "proof_sha256": "07e88e402f49f30c6ededd6cc76ed3e2a7f4427ce7e994050f90ed381abbae00",
+     "proof_bytes": 548240285,
+     "drat_trim": "s VERIFIED"
+    },
+    "full_enumeration": null,
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 4,
+     "2": 12,
+     "3": 480
+    },
+    "inner_parts": 480,
+    "total": 6566213760,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "7ec3a496dedd44b6e7d922f622c970ce8a46e45f63322165a10712e317324550",
+     "cnf_bytes": 69301931,
+     "proof_sha256": "6b95cbd3d9304e5c84666bcab6e180e57544f548293a77422a8644204c5af5ca",
+     "proof_bytes": 638242754,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 8649,
+    "outer_max": 195919005
+   }
+  },
+  {
+   "case": "hex-12hex_3up-21-Hh",
+   "family": "hex",
+   "grid": "hexagonal",
+   "file": "12hex_3up.txt",
+   "index": 21,
+   "cells": 12,
+   "Hc": 3,
+   "Hh": 4,
+   "variant": "Hh",
+   "k": 4,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1,
+     "3": 1
+    },
+    "inner_parts": 1,
+    "total": 56,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "1fed43ddb49a9e66ddc9f33acc24db22733a5e534159155e843c31d980653def",
+     "cnf_bytes": 30801717,
+     "proof_sha256": "ee8c19b66c16b08610690581cecf8d864455b9ca6fe2c20af914b182bf45f759",
+     "proof_bytes": 15442843,
+     "drat_trim": "s VERIFIED"
+    },
+    "full_enumeration": {
+     "total": 56,
+     "proof": {
+      "cnf_sha256": "70ca308314ef7d21b1ba66d68a9a36b830ce2eb4312f330a2e83e2f979b6c411",
+      "cnf_bytes": 30823117,
+      "proof_sha256": "707cbe1d2548b3fbbfb639484baabbb2738a72517c0338977c7baf83d6e5c7c8",
+      "proof_bytes": 16738940,
+      "drat_trim": "s VERIFIED"
+     }
+    },
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1,
+     "3": 1
+    },
+    "inner_parts": 1,
+    "total": 56,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "372ec08b27659cc7bc92ff9ac8d7a3f9a4f3268e244738460c2a8f73077ef89f",
+     "cnf_bytes": 30872719,
+     "proof_sha256": "6c6d69d00eb263f2a295d7111e5f6405ab2a5ddb44667eabf52fef44f3dc23ed",
+     "proof_bytes": 2733047,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 56,
+    "outer_max": 56
+   }
+  },
+  {
+   "case": "hex-13hex_3up-19-Hc",
+   "family": "hex",
+   "grid": "hexagonal",
+   "file": "13hex_3up.txt",
+   "index": 19,
+   "cells": 13,
+   "Hc": 4,
+   "Hh": 4,
+   "variant": "Hc",
+   "k": 4,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1,
+     "3": 1
+    },
+    "inner_parts": 1,
+    "total": 98304,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "dfc8dd9f0e2a80bdef1b4da77ae07ac81d470b5f0ef2c3df43a8a628dfa7149a",
+     "cnf_bytes": 34086496,
+     "proof_sha256": "c1f4d0ad81bff7ca1ac9a9e1155939af7ee2b26722cba53d79aaa0b1ffed3d16",
+     "proof_bytes": 437890248,
+     "drat_trim": "s VERIFIED"
+    },
+    "full_enumeration": null,
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1,
+     "3": 1
+    },
+    "inner_parts": 1,
+    "total": 98304,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "8306c74c5ac1c27746413aa309f1ebdcea65e9af0edf5c89cb6eca14b98285c8",
+     "cnf_bytes": 34161209,
+     "proof_sha256": "d4e1837c512ed149b009aa38d074274723f266ab15aad15a0ca74147850a1897",
+     "proof_bytes": 772989126,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 98304,
+    "outer_max": 98304
+   }
+  },
+  {
+   "case": "hex-13hex_3up-19-Hh",
+   "family": "hex",
+   "grid": "hexagonal",
+   "file": "13hex_3up.txt",
+   "index": 19,
+   "cells": 13,
+   "Hc": 4,
+   "Hh": 4,
+   "variant": "Hh",
+   "k": 4,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1,
+     "3": 3
+    },
+    "inner_parts": 3,
+    "total": 91614336,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "6522665d804311ccdb707908d4cddf7e927fae07634b421c0087a426c58f95ee",
+     "cnf_bytes": 34086330,
+     "proof_sha256": "a50591fedba4b541ebef9845cd34476c7642ec92c5bf8f456ab975edfc9a6a20",
+     "proof_bytes": 417562883,
+     "drat_trim": "s VERIFIED"
+    },
+    "full_enumeration": null,
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1,
+     "3": 3
+    },
+    "inner_parts": 3,
+    "total": 91614336,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "cc003e42612c75b075528e8b948785bd3e4180cb1422b9ddc08a602d74b23905",
+     "cnf_bytes": 34311449,
+     "proof_sha256": "249e48a7b5f89ef76e5bdfc2d679c7ab1d9b402f3849b823927f266c5c34107b",
+     "proof_bytes": 766092492,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 11949696,
+    "outer_max": 59748480
+   }
+  },
+  {
+   "case": "hex-13hex_3up-38-Hh",
+   "family": "hex",
+   "grid": "hexagonal",
+   "file": "13hex_3up.txt",
+   "index": 38,
+   "cells": 13,
+   "Hc": 3,
+   "Hh": 4,
+   "variant": "Hh",
+   "k": 4,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 3,
+     "2": 3,
+     "3": 7
+    },
+    "inner_parts": 7,
+    "total": 21102048,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "9fd623161811ea8fca4178aa55008a625f9c683b524e847006ea00e84ca74b7a",
+     "cnf_bytes": 33759231,
+     "proof_sha256": "947b7258f52b197b50b2a37be6de6c48f94c8d7b0bc80f9d4b4964c4ce34d5ba",
+     "proof_bytes": 182106384,
+     "drat_trim": "s VERIFIED"
+    },
+    "full_enumeration": null,
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 3,
+     "2": 3,
+     "3": 7
+    },
+    "inner_parts": 7,
+    "total": 21102048,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "cd4ebc2c555de7b0ba3f9f64f44554f1a3e8ab1c3a7e8d4f6c0f6bdfe4e905f7",
+     "cnf_bytes": 34283405,
+     "proof_sha256": "2817db6976876d42fb30d8e860b8c0c4192669768c3de93ee693f03b6b81107a",
+     "proof_bytes": 353307478,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 3168,
+    "outer_max": 15054336
+   }
+  },
+  {
+   "case": "hex-15hex_3up-278-Hc",
+   "family": "hex",
+   "grid": "hexagonal",
+   "file": "15hex_3up.txt",
+   "index": 278,
+   "cells": 15,
+   "Hc": 4,
+   "Hh": 4,
+   "variant": "Hc",
+   "k": 4,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 3,
+     "2": 3,
+     "3": 11
+    },
+    "inner_parts": 11,
+    "total": 543708,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "b09ba9c386437f9ed91dc395c653492766604b651b36aa2fc9a36461d4ffda4f",
+     "cnf_bytes": 38743503,
+     "proof_sha256": "59a42b2f3e37d17385ef786f8cbcf0a5d618de05f51049bbe58d34b377ff9929",
+     "proof_bytes": 787758197,
+     "drat_trim": "s VERIFIED"
+    },
+    "full_enumeration": null,
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 3,
+     "2": 3,
+     "3": 11
+    },
+    "inner_parts": 11,
+    "total": 543708,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "aa630eba636332fe548fbb3cac22f1879edfc26a994b836b112ab0002935107b",
+     "cnf_bytes": 39578748,
+     "proof_sha256": "db635518b817f5802ab2a5605445c5c909400e2cc6c261daaa9eaab222267793",
+     "proof_bytes": 1113539341,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 1440,
+    "outer_max": 161280
+   }
+  },
+  {
+   "case": "hex-15hex_3up-278-Hh",
+   "family": "hex",
+   "grid": "hexagonal",
+   "file": "15hex_3up.txt",
+   "index": 278,
+   "cells": 15,
+   "Hc": 4,
+   "Hh": 4,
+   "variant": "Hh",
+   "k": 4,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 12,
+     "2": 18,
+     "3": 126
+    },
+    "inner_parts": 126,
+    "total": 261662826,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "2a743e6385108ab897da753d2ae1ec9f410bfa029725bd1a954e42a5849e2f2a",
+     "cnf_bytes": 38768538,
+     "proof_sha256": "1835c426063543cabfc4a6c0f763257013a4cd499f179fdd9320f8fb88fb2299",
+     "proof_bytes": 676411186,
+     "drat_trim": "s VERIFIED"
+    },
+    "full_enumeration": null,
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 12,
+     "2": 18,
+     "3": 126
+    },
+    "inner_parts": 126,
+    "total": 261662826,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "f80904cc39f59a9879f02a63df29730a03a3c11823b215738f408b5a10db1c38",
+     "cnf_bytes": 48339118,
+     "proof_sha256": "b50d402d4a92179534f4bc486a016c5ce641e544d05d3109a351fef77e405749",
+     "proof_bytes": 1271312795,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 104,
+    "outer_max": 59623980
+   }
+  },
+  {
+   "case": "hex-15hex_3up-315-Hc",
+   "family": "hex",
+   "grid": "hexagonal",
+   "file": "15hex_3up.txt",
+   "index": 315,
+   "cells": 15,
+   "Hc": 4,
+   "Hh": 4,
+   "variant": "Hc",
+   "k": 4,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 6,
+     "2": 14,
+     "3": 79
+    },
+    "inner_parts": 79,
+    "total": null,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "9c168f3dffe213c6dfdc7261d14ec19752f2570c4b0e0583c7fc9a800a39edb0",
+     "cnf_bytes": 60656851,
+     "proof_sha256": "47a4393095c73ad126c609ea17e16623e3d5158d1b8e43f1f484b80167a36aa9",
+     "proof_bytes": 2137304607,
+     "drat_trim": null
+    },
+    "full_enumeration": null,
+    "outer_complete": false
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 6,
+     "2": 14,
+     "3": 79
+    },
+    "inner_parts": 79,
+    "total": 269859001,
+    "inner_exhaustion_proof": null,
+    "outer_min": 72,
+    "outer_max": 181519200
+   }
+  },
+  {
+   "case": "hex-15hex_3up-315-Hh",
+   "family": "hex",
+   "grid": "hexagonal",
+   "file": "15hex_3up.txt",
+   "index": 315,
+   "cells": 15,
+   "Hc": 4,
+   "Hh": 4,
+   "variant": "Hh",
+   "k": 4,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 10,
+     "2": 29,
+     "3": 979
+    },
+    "inner_parts": 979,
+    "total": null,
+    "inner_exhaustion_proof": null,
+    "full_enumeration": null,
+    "outer_complete": false
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 10,
+     "2": 29,
+     "3": 979
+    },
+    "inner_parts": 979,
+    "total": 13031023098920,
+    "inner_exhaustion_proof": null,
+    "outer_min": 1152,
+    "outer_max": 1644620969298
+   }
+  },
+  {
+   "case": "hex-16hex_3up-2-Hc",
+   "family": "hex",
+   "grid": "hexagonal",
+   "file": "16hex_3up.txt",
+   "index": 2,
+   "cells": 16,
+   "Hc": 4,
+   "Hh": 4,
+   "variant": "Hc",
+   "k": 4,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1,
+     "3": 1
+    },
+    "inner_parts": 1,
+    "total": 880,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "1cb760beac0272188147d5c72ca474f5d4b7b39d74247b750eddd3011d1d09b0",
+     "cnf_bytes": 54099047,
+     "proof_sha256": "9696547245cf6c10bf89989cab525b8c467d9ffd8945c5b44d1c3c3644e38eb7",
+     "proof_bytes": 47198861,
+     "drat_trim": "s VERIFIED"
+    },
+    "full_enumeration": {
+     "total": 880,
+     "proof": {
+      "cnf_sha256": "2177687e75d2890d3cc1eb47ab621ebdb83ff9a147088e2dc4cd3275840c6456",
+      "cnf_bytes": 54483765,
+      "proof_sha256": "7c89d0b3fee7db637460ab6ea7fe09bbd72fe68692d51f6b4b4d4c2b15ab5cb5",
+      "proof_bytes": 43161270,
+      "drat_trim": "s VERIFIED"
+     }
+    },
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1,
+     "3": 1
+    },
+    "inner_parts": 1,
+    "total": 880,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "b941dc02fccdca91e5d621fcf4a8dbd6b9e53afc8d6eedf45f9a5f87a4b2607a",
+     "cnf_bytes": 54196923,
+     "proof_sha256": "53291214351f649bc9377590615f560349e8768461ef76752d382b2bbea2911b",
+     "proof_bytes": 37665165,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 880,
+    "outer_max": 880
+   }
+  },
+  {
+   "case": "hex-16hex_3up-2-Hh",
+   "family": "hex",
+   "grid": "hexagonal",
+   "file": "16hex_3up.txt",
+   "index": 2,
+   "cells": 16,
+   "Hc": 4,
+   "Hh": 4,
+   "variant": "Hh",
+   "k": 4,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1,
+     "3": 1
+    },
+    "inner_parts": 1,
+    "total": 24240,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "1cb760beac0272188147d5c72ca474f5d4b7b39d74247b750eddd3011d1d09b0",
+     "cnf_bytes": 54099047,
+     "proof_sha256": "9696547245cf6c10bf89989cab525b8c467d9ffd8945c5b44d1c3c3644e38eb7",
+     "proof_bytes": 47198861,
+     "drat_trim": "s VERIFIED"
+    },
+    "full_enumeration": null,
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1,
+     "3": 1
+    },
+    "inner_parts": 1,
+    "total": 24240,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "9424536b0aae541d5635d874c4d2476e331052e271609ba1ddb2baf3ce41aed6",
+     "cnf_bytes": 54196820,
+     "proof_sha256": "3a31a6af867c1eac621c9ce9f4e0a69eb50060f905dfa84a1da1c76d26014b1e",
+     "proof_bytes": 38705466,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 24240,
+    "outer_max": 24240
+   }
+  },
+  {
+   "case": "hex-16hex_3up-72-Hh",
+   "family": "hex",
+   "grid": "hexagonal",
+   "file": "16hex_3up.txt",
+   "index": 72,
+   "cells": 16,
+   "Hc": 3,
+   "Hh": 4,
+   "variant": "Hh",
+   "k": 4,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 2,
+     "2": 2,
+     "3": 5
+    },
+    "inner_parts": 5,
+    "total": 300583329,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "f741fbd5bcf3ef041852f3ac2a4ff7fbc1c1ec848a5e5fceb53226111435923f",
+     "cnf_bytes": 45315436,
+     "proof_sha256": "ef01fd40aa14420d59e46168383879726e882217b5e4c3508c296ff41ca2dac9",
+     "proof_bytes": 122986547,
+     "drat_trim": "s VERIFIED"
+    },
+    "full_enumeration": null,
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 2,
+     "2": 2,
+     "3": 5
+    },
+    "inner_parts": 5,
+    "total": 300583329,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "51aeab17b5ec0bb59de045c3413a22ea81e6ac042c61b61efdf2c77ba5dc09c3",
+     "cnf_bytes": 45735599,
+     "proof_sha256": "7327365b89c741c49a78012a7d8587d0d357d3e6d29442b70fbf4f6a2b7cc242",
+     "proof_bytes": 145047747,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 1556100,
+    "outer_max": 133524120
+   }
+  },
+  {
+   "case": "iamond-10iamond_0up-51-Hh",
+   "family": "iamond",
+   "grid": "triangular",
+   "file": "10iamond_0up.txt",
+   "index": 51,
+   "cells": 10,
+   "Hc": 3,
+   "Hh": 4,
+   "variant": "Hh",
+   "k": 4,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 12,
+     "3": 448
+    },
+    "inner_parts": 448,
+    "total": 342830592,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "fdd0ab759d84ab526ead824e55f40cbca63012f601587af4909d32381cd73d9c",
+     "cnf_bytes": 12151708,
+     "proof_sha256": "642bb6a8801015ef23b893dbeef1aaaadcb9239258cb1f3802e86aa1031a4a52",
+     "proof_bytes": 27620544,
+     "drat_trim": "s VERIFIED"
+    },
+    "full_enumeration": null,
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 12,
+     "3": 448
+    },
+    "inner_parts": 448,
+    "total": 342830592,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "25aebf1fa63d5f7b9ec5ff05502e06f090b638cb6d67c888ef98f3ca2d7f520a",
+     "cnf_bytes": 25226132,
+     "proof_sha256": "ec6bfe3fd1a820dcf015299cb4dd608f6252e12800c5d0eef71a4a95aeaf6c6b",
+     "proof_bytes": 105067619,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 1920,
+    "outer_max": 24560640
+   }
+  },
+  {
+   "case": "iamond-20iamond_2up-130-Hc",
+   "family": "iamond",
+   "grid": "triangular",
+   "file": "20iamond_2up.txt",
+   "index": 130,
+   "cells": 20,
+   "Hc": 4,
+   "Hh": 4,
+   "variant": "Hc",
+   "k": 4,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1,
+     "3": 2
+    },
+    "inner_parts": 2,
+    "total": 2418624,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "2af3cacfa9da4f1a510721d0de4a408604ea52f6ef50bac587e8889f65c32738",
+     "cnf_bytes": 54090549,
+     "proof_sha256": "1b0227d453f5bc45ab2dacb24099631f91b0e23231b557d04ad3e78d5f91aebd",
+     "proof_bytes": 237480564,
+     "drat_trim": "s VERIFIED"
+    },
+    "full_enumeration": null,
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1,
+     "3": 2
+    },
+    "inner_parts": 2,
+    "total": 2418624,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "3fd142ceb1142c8153a99a9ccc108985a5a0294f38d7b420ded235b53bc69f52",
+     "cnf_bytes": 54238246,
+     "proof_sha256": "edf9662201ea64af98964beb3778ef7b017ee2191a30252472b8e5e8fbe56799",
+     "proof_bytes": 255394044,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 891072,
+    "outer_max": 1527552
+   }
+  },
+  {
+   "case": "iamond-20iamond_2up-130-Hh",
+   "family": "iamond",
+   "grid": "triangular",
+   "file": "20iamond_2up.txt",
+   "index": 130,
+   "cells": 20,
+   "Hc": 4,
+   "Hh": 4,
+   "variant": "Hh",
+   "k": 4,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 6,
+     "3": 46
+    },
+    "inner_parts": 46,
+    "total": 932565708,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "b617165d33d658e60910454d15b80a44742de6387cbc4821020bbad297c2c49d",
+     "cnf_bytes": 54100579,
+     "proof_sha256": "241a4d36f2a61aa379d138283295c3c94d5a7e6178ea3008d5c9a446e98df2a7",
+     "proof_bytes": 210363356,
+     "drat_trim": "s VERIFIED"
+    },
+    "full_enumeration": null,
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 6,
+     "3": 46
+    },
+    "inner_parts": 46,
+    "total": 932565708,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "7b316c05736ac01b5cdb8cc9023ced5321ee7540027ef37ab92283ba8c40f111",
+     "cnf_bytes": 57498206,
+     "proof_sha256": "ab50d82e82a59c28f49b7f32e3f9dcdfdae73c8ad3467813cfa1ae17fc35f849",
+     "proof_bytes": 286163402,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 4752,
+    "outer_max": 252175680
+   }
+  },
+  {
+   "case": "omino-11omino_2up-2-Hh",
+   "family": "omino",
+   "grid": "square",
+   "file": "11omino_2up.txt",
+   "index": 2,
+   "cells": 11,
+   "Hc": 2,
+   "Hh": 3,
+   "variant": "Hh",
+   "k": 3,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1
+    },
+    "inner_parts": 1,
+    "total": 1250,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "7f87a6517a4b5cce2a7d7c928c343ee36bac05ed831f07c2b332fe246c63dd7c",
+     "cnf_bytes": 4692800,
+     "proof_sha256": "b50df7f178c6107f32a1a3ffffc9e41653b5c71f75a717b22b032ff28b145c63",
+     "proof_bytes": 865717,
+     "drat_trim": "s VERIFIED"
+    },
+    "full_enumeration": {
+     "total": 1250,
+     "proof": {
+      "cnf_sha256": "d862ee97f60ff3859bf73ca1ab5cf817c3d4faa312a9badde314452fd418b867",
+      "cnf_bytes": 4974442,
+      "proof_sha256": "b4c94fdc54bea1eaabcfb5ecabbed94c7b483eca71e7a2ff7e388a5e641e6f84",
+      "proof_bytes": 5104207,
+      "drat_trim": "s VERIFIED"
+     }
+    },
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1
+    },
+    "inner_parts": 1,
+    "total": 1250,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "cd429ef6128840766795abba6d2f8c51bd1fe690753bff2d4cd2784c9571307a",
+     "cnf_bytes": 4701755,
+     "proof_sha256": "84f178e5e77e085e3182c7d057c1b6fd5f7f275866d2b0be03c12ce55f159863",
+     "proof_bytes": 1306631,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 1250,
+    "outer_max": 1250
+   }
+  },
+  {
+   "case": "omino-13omino_2up-50-Hh",
+   "family": "omino",
+   "grid": "square",
+   "file": "13omino_2up.txt",
+   "index": 50,
+   "cells": 13,
+   "Hc": 2,
+   "Hh": 3,
+   "variant": "Hh",
+   "k": 3,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1
+    },
+    "inner_parts": 1,
+    "total": 594,
+    "inner_exhaustion_proof": null,
+    "full_enumeration": {
+     "total": 594,
+     "proof": {
+      "cnf_sha256": "f64375a4b9aea77397f0e2c6548b62ed644d6d23bdee52657f599c0e66f873e3",
+      "cnf_bytes": 12205899,
+      "proof_sha256": "9ebe3282a868800e4d4e3c75ebf395e3bce9895b16e7a220a5860ac1128530dd",
+      "proof_bytes": 11877908,
+      "drat_trim": "s VERIFIED"
+     }
+    },
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1
+    },
+    "inner_parts": 1,
+    "total": 594,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "74c4028031258601f1b6b902c1e34284844345c626d5e519541b9952dce33e60",
+     "cnf_bytes": 12046382,
+     "proof_sha256": "33f902351c95502f71aa5007b4902d7e4cadba1cafc1b96452e2c46f5e8e9207",
+     "proof_bytes": 5751550,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 594,
+    "outer_max": 594
+   }
+  },
+  {
+   "case": "omino-17omino_2up-43-Hc",
+   "family": "omino",
+   "grid": "square",
+   "file": "17omino_2up.txt",
+   "index": 43,
+   "cells": 17,
+   "Hc": 3,
+   "Hh": 3,
+   "variant": "Hc",
+   "k": 3,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1
+    },
+    "inner_parts": 1,
+    "total": 28,
+    "inner_exhaustion_proof": null,
+    "full_enumeration": {
+     "total": 28,
+     "proof": {
+      "cnf_sha256": "70b0acc6ee4fa5b9d76cfe3bf3023258a7ec3aa64c84e8948ce2f5ad04b5e50b",
+      "cnf_bytes": 15360990,
+      "proof_sha256": "68cd12f778e4078eb05a6c66fd3f5c677ddb9e38f5ee8ea67fe19b5134b9879c",
+      "proof_bytes": 12224698,
+      "drat_trim": "s VERIFIED"
+     }
+    },
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1
+    },
+    "inner_parts": 1,
+    "total": 28,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "862c5d79dc8817fbe34205f15b1dfc2922de1d86cd3c4413a3df82314a19ec89",
+     "cnf_bytes": 15372678,
+     "proof_sha256": "1895779006ebf2b22e61703424ddc4d93ed0100144e6093624d9159123b85ece",
+     "proof_bytes": 4200353,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 28,
+    "outer_max": 28
+   }
+  },
+  {
+   "case": "omino-17omino_2up-43-Hh",
+   "family": "omino",
+   "grid": "square",
+   "file": "17omino_2up.txt",
+   "index": 43,
+   "cells": 17,
+   "Hc": 3,
+   "Hh": 3,
+   "variant": "Hh",
+   "k": 3,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1
+    },
+    "inner_parts": 1,
+    "total": 430,
+    "inner_exhaustion_proof": null,
+    "full_enumeration": {
+     "total": 430,
+     "proof": {
+      "cnf_sha256": "fc185255ea4b65170585c34733d378ba4c341f1e32b5538c257bfd5c022a3fa0",
+      "cnf_bytes": 15450868,
+      "proof_sha256": "c655318f8e207c566850826f54d2a28c664fb13db58df03ab97c3872161b9a06",
+      "proof_bytes": 12359619,
+      "drat_trim": "s VERIFIED"
+     }
+    },
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1
+    },
+    "inner_parts": 1,
+    "total": 430,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "862c5d79dc8817fbe34205f15b1dfc2922de1d86cd3c4413a3df82314a19ec89",
+     "cnf_bytes": 15372678,
+     "proof_sha256": "1895779006ebf2b22e61703424ddc4d93ed0100144e6093624d9159123b85ece",
+     "proof_bytes": 4200353,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 430,
+    "outer_max": 430
+   }
+  },
+  {
+   "case": "omino-17omino_2up-192-Hc",
+   "family": "omino",
+   "grid": "square",
+   "file": "17omino_2up.txt",
+   "index": 192,
+   "cells": 17,
+   "Hc": 3,
+   "Hh": 3,
+   "variant": "Hc",
+   "k": 3,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1
+    },
+    "inner_parts": 1,
+    "total": 2,
+    "inner_exhaustion_proof": null,
+    "full_enumeration": {
+     "total": 2,
+     "proof": {
+      "cnf_sha256": "ec9aaf336e61500011ddc2a12eeb2748976ac29174a5aac74d3052e92dcfb2c7",
+      "cnf_bytes": 12599738,
+      "proof_sha256": "c33a327ae3e707c2a1072127e08a4654fcb22f6ab35082170e04389f0c6b364b",
+      "proof_bytes": 13410156,
+      "drat_trim": "s VERIFIED"
+     }
+    },
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 1
+    },
+    "inner_parts": 1,
+    "total": 2,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "4e069416bdd231aaedcdb9ad659e3b55a6986543efe229a15ef7332e070763d4",
+     "cnf_bytes": 12614014,
+     "proof_sha256": "a59109bfc6ea9a445d4a046ea10c67679fdf046d6f0c31e19d3823297d035573",
+     "proof_bytes": 5384835,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 2,
+    "outer_max": 2
+   }
+  },
+  {
+   "case": "omino-17omino_2up-192-Hh",
+   "family": "omino",
+   "grid": "square",
+   "file": "17omino_2up.txt",
+   "index": 192,
+   "cells": 17,
+   "Hc": 3,
+   "Hh": 3,
+   "variant": "Hh",
+   "k": 3,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 2,
+     "2": 4
+    },
+    "inner_parts": 4,
+    "total": 1168,
+    "inner_exhaustion_proof": null,
+    "full_enumeration": {
+     "total": 1168,
+     "proof": {
+      "cnf_sha256": "e7043c00bce52246933527a7b06173d15a5da9489ff0a150cb584c843299f9f0",
+      "cnf_bytes": 12884623,
+      "proof_sha256": "f68fd3ad45c5286b3595b5823ba58e780e04733b205c808314f0350944da3b1c",
+      "proof_bytes": 12758339,
+      "drat_trim": "s VERIFIED"
+     }
+    },
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 2,
+     "2": 4
+    },
+    "inner_parts": 4,
+    "total": 1168,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "8311d039db16e73bd618abb95d9af34d5d03ccc43d24bc77266d59a9b80df237",
+     "cnf_bytes": 12658498,
+     "proof_sha256": "e4269d831865adc616bb33635177d96d22692f0de29a58a6c20cadfe0585cf1c",
+     "proof_bytes": 5739871,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 14,
+    "outer_max": 984
+   }
+  },
+  {
+   "case": "omino-17omino_2up-521-Hh",
+   "family": "omino",
+   "grid": "square",
+   "file": "17omino_2up.txt",
+   "index": 521,
+   "cells": 17,
+   "Hc": 2,
+   "Hh": 3,
+   "variant": "Hh",
+   "k": 3,
+   "central_stabilizer_order": 1,
+   "first": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 2
+    },
+    "inner_parts": 2,
+    "total": 20160,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "bce5fc197c17b87d52a12fa7c56a2955f67f8b4561c62b6b622936af70539fd3",
+     "cnf_bytes": 21203652,
+     "proof_sha256": "eabbdaa13489a6a482a8982f087587b4f9bfc6802c82bc6f1feaeddc64b079e5",
+     "proof_bytes": 14052535,
+     "drat_trim": "s VERIFIED"
+    },
+    "full_enumeration": null,
+    "outer_complete": true
+   },
+   "second": {
+    "prefix_counts": {
+     "1": 1,
+     "2": 2
+    },
+    "inner_parts": 2,
+    "total": 20160,
+    "inner_exhaustion_proof": {
+     "cnf_sha256": "d9a399556119c4f861093eab4b7463d7f622a4d5b38d3e32da44563d8a0cd6cc",
+     "cnf_bytes": 21252320,
+     "proof_sha256": "51298fdd88feda9bdce1f6292e0f09ac14aaf384faf91032511c8e11d1543074",
+     "proof_bytes": 3595666,
+     "drat_trim": "s VERIFIED"
+    },
+    "outer_min": 6336,
+    "outer_max": 13824
+   }
+  }
+ ],
+ "public_report_comparisons": [
+  {
+   "case": "hex-11hex_3up-18-Hc",
+   "K": 1,
+   "counted": "all 1-layer Hc-coronas (not required to extend)",
+   "count": 793,
+   "drat_trim": "s VERIFIED"
+  },
+  {
+   "case": "hex-11hex_3up-18-Hh",
+   "K": 1,
+   "counted": "all 1-layer Hh-coronas (not required to extend)",
+   "count": 4602,
+   "drat_trim": "s VERIFIED"
+  },
+  {
+   "case": "hex-16hex_3up-2-Hc",
+   "K": 1,
+   "counted": "all 1-layer Hc-coronas (not required to extend)",
+   "count": 251,
+   "drat_trim": "s VERIFIED"
+  },
+  {
+   "case": "hex-16hex_3up-2-Hc",
+   "K": 2,
+   "counted": "all 2-layer Hc-coronas (not required to extend)",
+   "count": 1449,
+   "drat_trim": "s VERIFIED"
+  },
+  {
+   "case": "hex-16hex_3up-2-Hh",
+   "K": 1,
+   "counted": "all 1-layer Hh-coronas (not required to extend)",
+   "count": 2765,
+   "drat_trim": "s VERIFIED"
+  },
+  {
+   "case": "hex-16hex_3up-72-Hc",
+   "K": 1,
+   "counted": "all 1-layer Hc-coronas (not required to extend)",
+   "count": 5326,
+   "drat_trim": "s VERIFIED"
+  }
+ ]
+}

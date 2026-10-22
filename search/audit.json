@@ -1,0 +1,51 @@
+{
+  "candidate_count": 3442,
+  "candidate_by_cells": {
+    "22": 148,
+    "26": 154,
+    "23": 182,
+    "21": 105,
+    "20": 2220,
+    "27": 165,
+    "25": 210,
+    "28": 122,
+    "24": 136
+  },
+  "candidate_topology_and_identity": "PASS",
+  "periodic_certificates": "PASS",
+  "certificate_rows": 576,
+  "distinct_certified_periodic_shapes": 576,
+  "tilings_by_copies": {
+    "2": 413,
+    "4": 98,
+    "1": 65
+  },
+  "attempt_files": {
+    "pilot-attempts.jsonl": {
+      "rows": 12,
+      "status": {
+        "UNSAT": 12
+      }
+    },
+    "screen-attempts.jsonl": {
+      "rows": 394,
+      "status": {
+        "UNSAT": 335,
+        "SAT": 28,
+        "two_copy_tiler": 3,
+        "periodic_tiler": 24,
+        "one_copy_tiler": 4
+      }
+    },
+    "screen-fast-attempts.jsonl": {
+      "rows": 3548,
+      "status": {
+        "UNSAT": 2519,
+        "SAT": 484,
+        "periodic_tiler": 484,
+        "one_copy_tiler": 61
+      }
+    }
+  },
+  "checked_by": "audit.py; no imports from generator, SAT encoding or solver"
+}

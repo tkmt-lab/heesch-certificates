@@ -1,0 +1,131 @@
+{
+ "note": "UNSAT screening instances re-solved with a second SAT solver on the same CNF encoding",
+ "rows": [
+  {
+   "id": "0033b33f3f1f72ab7d17d7e1e3c30a61e3beea9b0081efc58d37e5dbdcd10560",
+   "K": 1,
+   "cells": 20,
+   "status": "UNSAT",
+   "solver": "glucose4",
+   "variables": 9114,
+   "clauses": 33889
+  },
+  {
+   "id": "0134ad9970d86a36bbd4e2c451370b67ed9724d0f8764ba15b2c7613879e91d8",
+   "K": 1,
+   "cells": 21,
+   "status": "UNSAT",
+   "solver": "glucose4",
+   "variables": 8118,
+   "clauses": 30233
+  },
+  {
+   "id": "039c956742e2eca02daa61ca29a6be66eab1302f216368d3c0ee3a90792eb72c",
+   "K": 1,
+   "cells": 22,
+   "status": "UNSAT",
+   "solver": "glucose4",
+   "variables": 11040,
+   "clauses": 40867
+  },
+  {
+   "id": "032003289d9d61591381d26c1a1d5be20d890540148a142a1071bb78766494c6",
+   "K": 1,
+   "cells": 23,
+   "status": "UNSAT",
+   "solver": "glucose4",
+   "variables": 9984,
+   "clauses": 37387
+  },
+  {
+   "id": "01c11688541e44cde84db4110263811979f48323218cf1db40039738254edd65",
+   "K": 1,
+   "cells": 24,
+   "status": "UNSAT",
+   "solver": "glucose4",
+   "variables": 10400,
+   "clauses": 39042
+  },
+  {
+   "id": "06ea29afecc673ebbd7493070faf7913c145db38619c0d17f3d0e8fc8e9197d9",
+   "K": 1,
+   "cells": 25,
+   "status": "UNSAT",
+   "solver": "glucose4",
+   "variables": 12480,
+   "clauses": 46621
+  },
+  {
+   "id": "09f6a3d3dc77f0df7851ecae343b88c612c6e63df7abb6cf959712701cd7dd82",
+   "K": 1,
+   "cells": 26,
+   "status": "UNSAT",
+   "solver": "glucose4",
+   "variables": 16767,
+   "clauses": 62318
+  },
+  {
+   "id": "001f86df69e8863bba9c56f8d0ba109e5435dec47ac25470e81df5ec0a9dd62b",
+   "K": 1,
+   "cells": 27,
+   "status": "UNSAT",
+   "solver": "glucose4",
+   "variables": 15512,
+   "clauses": 57868
+  },
+  {
+   "id": "002b2d638331b253ef501ca68c410946486905c0b7ab80b47460998e2ca1aab4",
+   "K": 1,
+   "cells": 28,
+   "status": "UNSAT",
+   "solver": "glucose4",
+   "variables": 13920,
+   "clauses": 52384
+  },
+  {
+   "id": "003280ec2cf5f42def04d65e49aea2706cb12068d240f6f1f059da01d5407f6f",
+   "K": 3,
+   "cells": 20,
+   "status": "UNSAT",
+   "solver": "glucose4",
+   "variables": 447596,
+   "clauses": 1938300
+  },
+  {
+   "id": "037ca8e87aece1b82fdf5bb1f5f5de8c323ab0839251004d0a99ab6639573c6d",
+   "K": 3,
+   "cells": 20,
+   "status": "UNSAT",
+   "solver": "glucose4",
+   "variables": 437882,
+   "clauses": 1894977
+  },
+  {
+   "id": "02559f1e11dcdf5cbe9db1cdec1d2f2ddb74e00cee1771830ef0be6c7642e9ff",
+   "K": 3,
+   "cells": 22,
+   "status": "UNSAT",
+   "solver": "glucose4",
+   "variables": 391873,
+   "clauses": 1664464
+  },
+  {
+   "id": "036b05dba7aee7d2a4f0f9ca10c4f531276b6272a9a5ec15fae3553aaa3fe44f",
+   "K": 3,
+   "cells": 20,
+   "status": "UNSAT",
+   "solver": "glucose4",
+   "variables": 270173,
+   "clauses": 1143497
+  },
+  {
+   "id": "021281407b17f5fec24f3548b1ae6d13f541a9ccca7a6924c035fc01e1e0791a",
+   "K": 3,
+   "cells": 23,
+   "status": "UNSAT",
+   "solver": "glucose4",
+   "variables": 570895,
+   "clauses": 2430042
+  }
+ ]
+}

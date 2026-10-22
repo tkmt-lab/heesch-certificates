@@ -1,0 +1,18 @@
+{
+  "challenge_module": "Heesch.Challenge",
+  "solution_module": "Heesch.Solution",
+  "theorem_names": [
+    "Heesch.hh_sound_square",
+    "Heesch.hc_sound_square",
+    "Heesch.hh_sound_hex",
+    "Heesch.hc_sound_hex",
+    "Heesch.hh_sound_tri",
+    "Heesch.hc_sound_tri"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ]
+}
