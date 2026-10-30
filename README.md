@@ -144,7 +144,7 @@ their stated scope. Who checked what, when and with which tools is in
   formulation over all layers, the shapes and every reference value come from this work.
 - The Heesch challenge of Layr-Labs/Eigen and its contributors, which first attached checkable certificates
   (witness checks, CNF digests, LRAT checked by cake_lpr) to Heesch numbers.
-- Heinrich Heesch's problem; Casey Mann's survey; Casey Mann and Bruce Thomas's computations for edge-marked
+- Heinrich Heesch's problem; Casey Mann's survey; Casey Mann and B. Charles Thomas's computations for edge-marked
   polyforms; Bojan Bašić's figures with Heesch number 6.
 - Marijn Heule, Nathan Wetzler and Warren Hunt's drat-trim; Armin Biere's CaDiCaL and Lingeling; Gilles
   Audemard and Laurent Simon's Glucose; Alexey Ignatiev, Antonio Morgado and Joao Marques-Silva's PySAT;
