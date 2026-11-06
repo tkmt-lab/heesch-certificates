@@ -12,7 +12,7 @@ import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 REPOSITORY = "https://github.com/tkmt-lab/heesch-certificates"
 PAPER = "paper-heesch-certificates-v2.1-en"
 THEOREMS = ["Heesch.hh_sound_square", "Heesch.hc_sound_square", "Heesch.hh_sound_hex", "Heesch.hc_sound_hex",

@@ -1,8 +1,8 @@
 {
-  "message": "Cite the article and the exact packet version.",
+  "message": "Cite the article and the exact packet version. Packet 1.0.1 is planned for 2026-11-09 and is not yet published; the release coordinator will update date-released on publication.",
   "title": "Heesch numbers with SAT certificates and a Lean-verified encoding",
   "type": "software",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [
     {
       "family-names": "Takimoto",
@@ -26,5 +26,6 @@
     "version": "2.1",
     "license": "CC-BY-4.0",
     "url": "https://github.com/tkmt-lab/heesch-certificates"
-  }
+  },
+  "date-released": "2026-11-09"
 }

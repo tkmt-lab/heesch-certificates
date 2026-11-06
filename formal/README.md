@@ -15,12 +15,24 @@ The six theorems are `Heesch.hh_sound_square`, `Heesch.hc_sound_square`, `Heesch
 
 ## Build and check
 
-```sh
+Install elan and Git first. Fetching the pinned toolchain, dependencies and Mathlib cache needs network
+access. The sandboxed Comparator command needs Linux with bubblewrap and permission to create user
+namespaces; CI installs `bubblewrap` and enables those namespaces on its Ubuntu runner.
+
+From `formal/`, run the following in Bash. Logs go outside the closed packet inventory. These are the build,
+axiom and Comparator checks of the separate CI `lean` job:
+
+```bash
+set -euo pipefail
+check_output=$(mktemp -d)
 lake exe cache get                       # prebuilt Mathlib
 lake build                               # Heesch.Solution and Heesch.SquareEq (about 2 minutes, < 2.1 GB per file)
 lake build Heesch.Challenge              # the statement (six sorry warnings expected)
-lake env lean ../ci/Axioms.lean          # every line: [propext, Classical.choice, Quot.sound]
-lake comparator --config comparator.json --paranoid   # Linux with bubblewrap
+lake env lean ../ci/Axioms.lean | tee "$check_output/axioms.txt"
+test "$(grep -c 'depends on axioms: \[propext, Classical.choice, Quot.sound\]' "$check_output/axioms.txt")" -eq 7
+test "$(wc -l < "$check_output/axioms.txt")" -eq 7
+lake comparator --config comparator.json --paranoid | tee "$check_output/comparator.txt"
+grep -q 'Your solution is okay!' "$check_output/comparator.txt"
 ```
 
 `Heesch.Challenge` and `Heesch.Solution` declare the same names and are not imported together; the default

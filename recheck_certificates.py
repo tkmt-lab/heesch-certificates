@@ -10,8 +10,8 @@ Usage:
 For each certificate the CNF is regenerated with generator/ (deterministic) and must have the
 recorded SHA-256 and size. Unless --cnf-only, the recorded solver (python-sat, with the recorded
 options) solves it again with proof output; the result must be UNSAT and drat-trim must print
-"s VERIFIED". The proof's SHA-256 is compared with the recorded one for information only (a
-different python-sat build may write a different but equally valid proof). Files are written to
+"s VERIFIED" and exit with code 0. The proof's SHA-256 is compared with the recorded one for
+information only (a different python-sat build may write a different but equally valid proof). Files are written to
 a temporary directory (--workdir) and deleted after each certificate.
 Needs: python-sat==1.9.dev17 (requirements.txt) and drat-trim (tools/build_drat_trim.sh, or set
 DRAT_TRIM). Memory: most certificates need well under 1 GB; the largest about 3 GB.
@@ -75,7 +75,8 @@ def recheck(c, family, workdir, cnf_only, timeout):
         if p and os.path.exists(p):
             os.remove(p)
     out["seconds"] = round(time.time() - t0, 2)
-    ok = out["cnf_sha256_match"] and (cnf_only or (out["solve"] == "UNSAT" and out["drat_trim"]["result"] == "s VERIFIED"))
+    ok = out["cnf_sha256_match"] and (cnf_only or (out["solve"] == "UNSAT"
+        and out["drat_trim"]["result"] == "s VERIFIED" and out["drat_trim"]["returncode"] == 0))
     out["status"] = "PASS" if ok else "FAIL"
     return out
 

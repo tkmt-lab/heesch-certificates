@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "status": "LOCAL_RELEASE_CANDIDATE",
   "proposed_repository": "https://github.com/tkmt-lab/heesch-certificates",
   "repository_name_decided": false,
@@ -11,8 +11,8 @@
   "files": [
     {
       "path": ".github/workflows/verify.yml",
-      "sha256": "f166cd7e0f8cd92c23148e28f0cb9ac2bc3d31a24ab235c9d049221842a3638e",
-      "bytes": 2608
+      "sha256": "3caf29f2287f7c298390e5d9ff61bcacb929c86359c1542a4169ecbc636bb208",
+      "bytes": 2819
     },
     {
       "path": ".gitignore",
@@ -21,8 +21,8 @@
     },
     {
       "path": ".zenodo.json",
-      "sha256": "97a312b9657d1e3b59c8da115e70625d24103cfe453ad626f1e84630d733c33d",
-      "bytes": 1674
+      "sha256": "8c0dcff8e88fe6eed5f23e4a6936908ef682197267c758379e4b1690cbb0eb45",
+      "bytes": 1836
     },
     {
       "path": "AGENTS.md",
@@ -41,13 +41,13 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "5d7c99071fb6c522ba8182e4ad1df04b960ef5bd3cf3e6493a0eca1d5d342612",
-      "bytes": 385
+      "sha256": "dcf969ac5eb79430ac81b23f94e4cfd17ce4edcc446551ad6d41035d16f20c92",
+      "bytes": 1410
     },
     {
       "path": "CITATION.cff",
-      "sha256": "2511d222fcc74774bcc6c0cec7a131e118af65b5bbfec20d63d90621ee588381",
-      "bytes": 907
+      "sha256": "296f29590ac08c6e9bbf3c2fb04f79504818d694c91f696228f5736577338b58",
+      "bytes": 1071
     },
     {
       "path": "FORMAT.md",
@@ -61,13 +61,13 @@
     },
     {
       "path": "README.md",
-      "sha256": "c2aa2aa297a85c5b57dc7a5d0554ce5e448df60dfc91ca2e30a46076ac7613f1",
-      "bytes": 10813
+      "sha256": "2121a18e85d18bbe606d1fa8dcfc285dceb9944f77d77d56f5d0743d3ceffcbf",
+      "bytes": 14550
     },
     {
       "path": "VERIFICATION-RECORD.md",
-      "sha256": "211490b0bb18af15caa00cbc75a8abc479ef7fbcc4d5186e1adef3b13804ecb0",
-      "bytes": 14760
+      "sha256": "2a3d40c2eebaf3b055545497d152d26d160251dc549c313e148e2a6b705e8a29",
+      "bytes": 15378
     },
     {
       "path": "bridge/file-comparison.jsonl.gz",
@@ -196,7 +196,7 @@
     },
     {
       "path": "check_packet.py",
-      "sha256": "aa75140cb3e7f271b750c0d36c80e2fd26bdfb0d43a50e8eee40e9a0b8555038",
+      "sha256": "f65b127afa529db4b032c15cbffba8abf44d3ef2c9cfa64ef18a991d8bb1ddff",
       "bytes": 13797
     },
     {
@@ -230,13 +230,18 @@
       "bytes": 2932
     },
     {
+      "path": "ci/test_recheck_certificates.py",
+      "sha256": "d586a0f4ed2b04855d83792f20c5ebb3d6fa63d0001523dc1fe3d92090415565",
+      "bytes": 3792
+    },
+    {
       "path": "ci_check.py",
       "sha256": "94ad26e0bf964a5055438393a967b8ae181a3bd5c0e842db28fa058955f5fe47",
       "bytes": 3213
     },
     {
       "path": "claims.json",
-      "sha256": "c558e3cf9d32eaa53c21fc09b826dc11b0864fad04807aa09148e4603ea3bbe5",
+      "sha256": "60519d1a862798c64827c424fc16e194a56cb91676c7bae4b3349a7d377bb753",
       "bytes": 31802
     },
     {
@@ -420,6 +425,11 @@
       "bytes": 3846
     },
     {
+      "path": "formal/Heesch.lean",
+      "sha256": "facba07a11c454aad2b0633f70e9a721b29ba7ddd9dea4c2dc8958a7e5805a91",
+      "bytes": 236
+    },
+    {
       "path": "formal/Heesch/Basic.lean",
       "sha256": "d4f91c54ebe9ff9b61a49bf1e5178101cd65a2049689b2185eb3bcf8203408e8",
       "bytes": 10966
@@ -490,14 +500,9 @@
       "bytes": 4210
     },
     {
-      "path": "formal/Heesch.lean",
-      "sha256": "facba07a11c454aad2b0633f70e9a721b29ba7ddd9dea4c2dc8958a7e5805a91",
-      "bytes": 236
-    },
-    {
       "path": "formal/README.md",
-      "sha256": "94f383513773c960c5cdf1cdeb9a81463cfa3d8ca7b73f10d9015b825f34d44b",
-      "bytes": 3797
+      "sha256": "8e76dbcb8234146062c38cc5508cc3394af9dc9851f524321b17bf00ffe2af71",
+      "bytes": 4514
     },
     {
       "path": "formal/comparator.json",
@@ -511,7 +516,7 @@
     },
     {
       "path": "formal/lakefile.toml",
-      "sha256": "eea6c1563c5cb54668a6d0d1fae5bd1537b285531ffc74927afb1f9e33aedd8e",
+      "sha256": "582f3b8423d84148ad2f0a8d9a67baa80cdd0e38e05a748fb93d7e852a8f2f8a",
       "bytes": 380
     },
     {
@@ -561,8 +566,8 @@
     },
     {
       "path": "recheck_certificates.py",
-      "sha256": "4cb7f5c54b9b36c46590124270698932e46d0d71a0a3501634bc16ca5f425c77",
-      "bytes": 6172
+      "sha256": "6005eb7be29cdddb1bcda5384273f3b6c4a6e9e75f960a56f4eb0c9c6700bae7",
+      "bytes": 6241
     },
     {
       "path": "requirements.txt",
@@ -626,8 +631,8 @@
     },
     {
       "path": "tools/build_drat_trim.sh",
-      "sha256": "752cc39571647adb07b8264f445c16c7f6fc243a7fd6d8c1a217f1db1083a290",
-      "bytes": 833
+      "sha256": "b18f9e31e7d925c2f4a67d0c1dd07601e55c8845ad98ad5a7f7d4bbded84dca7",
+      "bytes": 928
     },
     {
       "path": "witnesses/hex/06hex_0up.jsonl",
@@ -739,5 +744,8 @@
       "sha256": "7b2637b6ffe01e09bf4936d85eb69bec9571b09437553995191bbde000fd8e18",
       "bytes": 22580
     }
-  ]
+  ],
+  "patch_base_commit": "60136d469ed9cbb78a8fb37f9a266325e1150df9",
+  "patch_prepared_date": "2026-11-06",
+  "planned_publication_date": "2026-11-09"
 }

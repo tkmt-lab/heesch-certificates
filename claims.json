@@ -1,5 +1,5 @@
 {
- "version": "1.0.0",
+ "version": "1.0.1",
  "paper": {
   "path": "paper-heesch-certificates-v2.1-en.tex",
   "sha256": "4e4871d4976f10ac82ac1fd930a2a5abf9de6b2026f5ee118f8ded79d991af11",
@@ -400,13 +400,13 @@
     },
     {
      "path": "recheck_certificates.py",
-     "sha256": "4cb7f5c54b9b36c46590124270698932e46d0d71a0a3501634bc16ca5f425c77",
-     "bytes": 6172
+     "sha256": "6005eb7be29cdddb1bcda5384273f3b6c4a6e9e75f960a56f4eb0c9c6700bae7",
+     "bytes": 6241
     },
     {
      "path": "tools/build_drat_trim.sh",
-     "sha256": "752cc39571647adb07b8264f445c16c7f6fc243a7fd6d8c1a217f1db1083a290",
-     "bytes": 833
+     "sha256": "b18f9e31e7d925c2f4a67d0c1dd07601e55c8845ad98ad5a7f7d4bbded84dca7",
+     "bytes": 928
     }
    ],
    "reproduce": "python3 -B recheck_certificates.py --sample (CI) or --all (hours); CNFs regenerate byte-identically",
@@ -452,8 +452,8 @@
    "evidence": [
     {
      "path": "VERIFICATION-RECORD.md",
-     "sha256": "211490b0bb18af15caa00cbc75a8abc479ef7fbcc4d5186e1adef3b13804ecb0",
-     "bytes": 14760
+     "sha256": "2a3d40c2eebaf3b055545497d152d26d160251dc549c313e148e2a6b705e8a29",
+     "bytes": 15378
     }
    ],
    "reproduce": "not distributed (no proof logs)",

@@ -11,5 +11,6 @@ fi
 git -C "$DIR" checkout --quiet "$COMMIT"
 if command -v sha256sum >/dev/null 2>&1; then H=$(sha256sum "$DIR/drat-trim.c" | cut -d' ' -f1); else H=$(shasum -a 256 "$DIR/drat-trim.c" | cut -d' ' -f1); fi
 [ "$H" = "$SRC_SHA256" ] || { echo "drat-trim.c hash mismatch: $H" >&2; exit 1; }
-cc "$DIR/drat-trim.c" -std=c99 -O2 -o "$DIR/drat-trim"
+# Expose getc_unlocked on glibc when compiling in strict C99 mode (GCC 14+).
+cc -D_DEFAULT_SOURCE "$DIR/drat-trim.c" -std=c99 -O2 -o "$DIR/drat-trim"
 echo "built $DIR/drat-trim (commit $COMMIT)"

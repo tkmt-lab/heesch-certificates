@@ -1,6 +1,8 @@
 # Heesch numbers of small polyforms with certificates and a Lean-verified SAT encoding
 
-Release 1.0.0 of https://github.com/tkmt-lab/heesch-certificates (tag `v1.0.0`). The article is
+Packet 1.0.1 of https://github.com/tkmt-lab/heesch-certificates (planned tag `v1.0.1`).
+Planned release date: **2026-11-09**; this correction is not yet published. The release coordinator will
+replace the planned date with the actual publication date in the release metadata. The article is unchanged:
 [paper-heesch-certificates-v2.1-en.pdf](paper-heesch-certificates-v2.1-en.pdf) (version 2.1, 15 pages).
 
 ## In brief
@@ -54,8 +56,33 @@ for a polyomino with Heesch number 4.
 
 ## Check in a minute
 
-Python 3.11 with the packages of [requirements.txt](requirements.txt) (`python3 -m pip install -r requirements.txt`).
-From the repository root:
+Requirements: Python 3.11, Git, a C compiler available as `cc`, and Poppler utilities (`pdftotext` and
+`pdfinfo`, used by the packet and privacy checks). The SAT checks also need the pinned packages in
+[requirements.txt](requirements.txt). Installing dependencies and building drat-trim need network access.
+
+For Ubuntu/Debian, with Python 3.11 and its `venv` module already installed
+(for a distro-managed Python 3.11, install `python3.11-venv` if needed):
+
+```sh
+sudo apt-get update
+sudo apt-get install -y build-essential git poppler-utils
+```
+
+On macOS, install the Xcode Command Line Tools (`xcode-select --install`, if absent) and, with Homebrew:
+
+```sh
+brew install python@3.11 git poppler
+```
+
+From the repository root, create the Python environment outside the packet's closed file inventory:
+
+```sh
+python3.11 -m venv ../heesch-venv
+. ../heesch-venv/bin/activate
+python3 -m pip install -r requirements.txt
+```
+
+Run the inventory check in a clean checkout, before fetching or building drat-trim or Lean dependencies:
 
 ```sh
 python3 -B check_packet.py              # file list, hashes, claims, records cross-checked, privacy (seconds)
@@ -72,18 +99,21 @@ To re-check one upper bound end to end (regenerate the CNF, compare its SHA-256,
 solver, check the proof with drat-trim; a few seconds):
 
 ```sh
+python3 -B ci/test_recheck_certificates.py   # proof-checker success and failure controls
 sh tools/build_drat_trim.sh                  # clones drat-trim at the pinned commit and compiles it
 python3 -B recheck_certificates.py --name omino_10omino_0up_0000_0
 ```
 
 ## More checks
 
-- `python3 -B ci_check.py` runs what the CI runs (about 4 minutes on a laptop): both witness checkers, `check_counts.py`
-  (both counting implementations recompared in cell coordinates; every inner part and completed corona
-  checked geometrically), `check_search.py` (candidate identities, all 576 periodic tilings, all 513
-  satisfying patches), Figure 1 regenerated and compared with the article source, and
+- `python3 -B ci_check.py` runs the computational part of the CI `records` job (about 4 minutes on a laptop):
+  both witness checkers, `check_counts.py` (stored inner-part sets and count records recompared in cell
+  coordinates; every recorded inner part and representative completed corona checked geometrically),
+  `check_search.py` (candidate identities, all 576 periodic tilings, all 513 satisfying patches), Figure 1 regenerated and compared with the article source, and
   `recheck_certificates.py --sample` (a stratified sample of the certificates, all three grids, Hh and Hc
-  with hole blocks, all three solvers).
+  with hole blocks, all three solvers), plus the two restricted-search proof samples. The same CI job also
+  runs `check_packet.py` and `python3 -B ci/test_recheck_certificates.py` (proof-checker success and failure
+  controls); Lean is checked in a separate `lean` job.
 - `python3 -B recheck_certificates.py --all` re-checks all 5,019 certificates (about 3–4 hours on one core;
   peak memory about 3 GB for the largest proof of 7.2 GB; at least 10 GB of free disk). `--cnf-only` only
   regenerates the CNFs and compares their hashes.
@@ -91,8 +121,23 @@ python3 -B recheck_certificates.py --name omino_10omino_0up_0000_0
   from the original site and verifies the hashes; `python3 -B checkers/check_all_witnesses.py --inputs DIR`
   then compares every shape and value with them.
 - Lean: see [formal/README.md](formal/README.md). With elan installed, from `formal/`:
-  `lake exe cache get && lake build && lake env lean ../ci/Axioms.lean`, and
-  `lake comparator --config comparator.json --paranoid` (Linux with bubblewrap).
+  `lake exe cache get`, `lake build`, `lake build Heesch.Challenge`, the seven-theorem axiom gate, and
+  `lake comparator --config comparator.json --paranoid` (Linux with bubblewrap). The full commands and
+  success conditions used by the separate CI `lean` job are in that README.
+
+The following table distinguishes fresh checks from comparisons of stored records. A successful packet
+inventory check establishes file and record consistency, not a fresh proof of every claim.
+
+| Claim or evidence | What the supplied commands recheck | Not included in that recheck |
+|---|---|---|
+| Lower bounds | Both geometric checkers inspect all 6,574 witnesses; `--inputs DIR` also compares shapes and values with downloaded Kaplan files. | Kaplan's original enumeration. |
+| Upper bounds | `recheck_certificates.py` regenerates CNFs, compares hashes, solves again and checks fresh proofs with drat-trim (28 stratified cases in CI; 5,019 with `--all`). | `--cnf-only` skips solving and proof checking. |
+| Encoding soundness and square-definition equality | The separate Lean build and axiom gate check the proofs; Comparator replays the six soundness theorems. | A Lean proof that the concrete DIMACS files equal `cnfOrd`, or Lean-internal DRAT checking. |
+| File correspondence | `check_packet.py` compares the stored per-CNF records with the certificate inventory. | The file-comparison programs are not shipped. |
+| Second encoding | The computation is described in `VERIFICATION-RECORD.md`; the inventory protects that record. | The second encoding and its proof logs are not shipped; the computation is not repeated by the packet checks. |
+| Maximal-corona counts and forced inner parts | `check_counts.py` compares the recorded inner-part sets, prefix counts, per-inner counts and totals, and geometrically checks each inner part and one representative completion. | The counting programs and exhaustion CNFs/proofs are not shipped. Recorded `s VERIFIED` strings are checked as records, not by rerunning drat-trim. |
+| Restricted search | `check_search.py` checks candidate identities, geometry, 576 periodic tilings and 513 saved SAT patches; CI additionally regenerates and checks two UNSAT proofs. Candidate generation and the SAT search program are supplied. | The fast CI does not rerun the full SAT search. |
+| Prose lemmas | The article supplies the arguments. | The packet checks do not formalize these arguments. |
 
 The file comparison of Section 7 is shipped as per-CNF records (`bridge/`), not as programs: the transcriptions
 of `cnfOrd`, the counter-order recovery and the multiset comparison were research scripts tied to local input
