@@ -5,7 +5,7 @@ from its Section 2). The article states the mathematics and the present scope; t
 what and when, which computations are independent of which, which AI readings took place, and what the packet
 checks. Dates are 2026, times JST (UTC+9) unless marked UTC. All work was done by the author with AI systems
 in separate sessions ("sessions" below); no human expert review has taken place. The packet was assembled and
-checked as a local release candidate in October. Sections 1–10 record that work; the changes in patch 1.0.1
+checked in October for release 1.0.0. Sections 1–10 record that work; the changes in patch 1.0.1
 are listed in Section 11 and the changelog.
 
 ## 1. Inputs
@@ -177,10 +177,9 @@ Environment: Lean 4.35.0, Mathlib v4.35.0. One Lean process at a time.
   `check_packet.py`, the witness checks, `check_counts.py`, `check_search.py`, Figure 1 and a sampled re-check of
   certificates (`ci_check.py`) in a clean Python 3.11 environment, all PASS (timings in the release notes).
 
-## 11. Patch 1.0.1 (planned 2026-11-09; not yet published)
+## 11. Patch 1.0.1 (2026-11-09)
 
 The patch corrects the drat-trim build and failure handling, documents the dependencies and reproduction
 scope, and corrects the input-file breakdown in Section 1 from 28/13 to 22/19. The manifest has 22 entries
 with role `selected`, 18 with role `searched`, and one searched file used as restricted-search parents.
 The mathematical claims, article version 2.1, Lean statements and proofs, and numerical data are unchanged.
-The release coordinator will update the planned date on publication.

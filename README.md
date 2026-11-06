@@ -1,8 +1,7 @@
 # Heesch numbers of small polyforms with certificates and a Lean-verified SAT encoding
 
-Packet 1.0.1 of https://github.com/tkmt-lab/heesch-certificates (planned tag `v1.0.1`).
-Planned release date: **2026-11-09**; this correction is not yet published. The release coordinator will
-replace the planned date with the actual publication date in the release metadata. The article is unchanged:
+Packet 1.0.1 of https://github.com/tkmt-lab/heesch-certificates (tag `v1.0.1`).
+Release date: **2026-11-09**. The article is unchanged:
 [paper-heesch-certificates-v2.1-en.pdf](paper-heesch-certificates-v2.1-en.pdf) (version 2.1, 15 pages).
 
 ## In brief

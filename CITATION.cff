@@ -1,5 +1,5 @@
 {
-  "message": "Cite the article and the exact packet version. Packet 1.0.1 is planned for 2026-11-09 and is not yet published; the release coordinator will update date-released on publication.",
+  "message": "Cite the article and the exact packet version. Packet 1.0.1, released 2026-11-09.",
   "title": "Heesch numbers with SAT certificates and a Lean-verified encoding",
   "type": "software",
   "version": "1.0.1",

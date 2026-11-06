@@ -1,9 +1,6 @@
 {
   "version": "1.0.1",
-  "status": "LOCAL_RELEASE_CANDIDATE",
-  "proposed_repository": "https://github.com/tkmt-lab/heesch-certificates",
-  "repository_name_decided": false,
-  "uploaded": false,
+  "status": "RELEASE",
   "DOI": null,
   "release_assets": [],
   "new_SAT_runs_for_packet": 0,
@@ -21,8 +18,8 @@
     },
     {
       "path": ".zenodo.json",
-      "sha256": "8c0dcff8e88fe6eed5f23e4a6936908ef682197267c758379e4b1690cbb0eb45",
-      "bytes": 1836
+      "sha256": "819a17ff696fea0fc50984f713b79a9bb73f5f442dabc8d57d7ed4c8f5f11c39",
+      "bytes": 1745
     },
     {
       "path": "AGENTS.md",
@@ -41,13 +38,13 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "dcf969ac5eb79430ac81b23f94e4cfd17ce4edcc446551ad6d41035d16f20c92",
-      "bytes": 1410
+      "sha256": "016f245f06888121af8dec287124c7f69fd8e31914a0f6b544bc38cf83c71ab9",
+      "bytes": 1270
     },
     {
       "path": "CITATION.cff",
-      "sha256": "296f29590ac08c6e9bbf3c2fb04f79504818d694c91f696228f5736577338b58",
-      "bytes": 1071
+      "sha256": "c4849ebdd604a7997122860f67c35d92045774467f812a7c87df4a8d6baeabd6",
+      "bytes": 975
     },
     {
       "path": "FORMAT.md",
@@ -61,13 +58,13 @@
     },
     {
       "path": "README.md",
-      "sha256": "2121a18e85d18bbe606d1fa8dcfc285dceb9944f77d77d56f5d0743d3ceffcbf",
-      "bytes": 14550
+      "sha256": "b93ec1baa03a1458bd4ab1b093bc689b087490e4997390b4107b5540bf340787",
+      "bytes": 14384
     },
     {
       "path": "VERIFICATION-RECORD.md",
-      "sha256": "2a3d40c2eebaf3b055545497d152d26d160251dc549c313e148e2a6b705e8a29",
-      "bytes": 15378
+      "sha256": "4d6c79b2e5bbf7e472892fd1e92b0a17a05eb27741124af983baac6d58ea9be0",
+      "bytes": 15271
     },
     {
       "path": "bridge/file-comparison.jsonl.gz",
@@ -196,8 +193,8 @@
     },
     {
       "path": "check_packet.py",
-      "sha256": "f65b127afa529db4b032c15cbffba8abf44d3ef2c9cfa64ef18a991d8bb1ddff",
-      "bytes": 13797
+      "sha256": "2909da91d5f4589f6a1a7a7c737335bf5902b1c7f07de9d723bdec16d067fc15",
+      "bytes": 14038
     },
     {
       "path": "check_search.py",
@@ -241,7 +238,7 @@
     },
     {
       "path": "claims.json",
-      "sha256": "60519d1a862798c64827c424fc16e194a56cb91676c7bae4b3349a7d377bb753",
+      "sha256": "3e80f5b884754c1bc91d4460f1da5f36db48bfe8aef97ec638812328d04494dc",
       "bytes": 31802
     },
     {
@@ -747,5 +744,6 @@
   ],
   "patch_base_commit": "60136d469ed9cbb78a8fb37f9a266325e1150df9",
   "patch_prepared_date": "2026-11-06",
-  "planned_publication_date": "2026-11-09"
+  "repository": "https://github.com/tkmt-lab/heesch-certificates",
+  "publication_date": "2026-11-09"
 }

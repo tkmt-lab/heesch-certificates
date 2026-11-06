@@ -452,8 +452,8 @@
    "evidence": [
     {
      "path": "VERIFICATION-RECORD.md",
-     "sha256": "2a3d40c2eebaf3b055545497d152d26d160251dc549c313e148e2a6b705e8a29",
-     "bytes": 15378
+     "sha256": "4d6c79b2e5bbf7e472892fd1e92b0a17a05eb27741124af983baac6d58ea9be0",
+     "bytes": 15271
     }
    ],
    "reproduce": "not distributed (no proof logs)",

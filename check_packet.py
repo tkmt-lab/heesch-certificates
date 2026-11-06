@@ -13,6 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 VERSION = "1.0.1"
+PUBLICATION_DATE = "2026-11-09"
 REPOSITORY = "https://github.com/tkmt-lab/heesch-certificates"
 PAPER = "paper-heesch-certificates-v2.1-en"
 THEOREMS = ["Heesch.hh_sound_square", "Heesch.hc_sound_square", "Heesch.hh_sound_hex", "Heesch.hc_sound_hex",
@@ -69,7 +70,9 @@ def main():
         if p.suffix == ".py":
             ast.parse(p.read_text(), filename=p.name)
     prov = load("PROVENANCE.json")
-    assert prov["version"] == VERSION and prov["uploaded"] is False and prov["release_assets"] == []
+    assert prov["version"] == VERSION and prov["status"] == "RELEASE"
+    assert prov["repository"] == REPOSITORY and prov["publication_date"] == PUBLICATION_DATE
+    assert prov["release_assets"] == []
     assert {r["path"] for r in prov["files"]} == actual - {"SHA256SUMS", "PROVENANCE.json"}
     for r in prov["files"]:
         fp(r)
@@ -225,11 +228,13 @@ def main():
 
     # 7. citation metadata
     cff = load("CITATION.cff")
+    assert cff["date-released"] == PUBLICATION_DATE
     author = [{"family-names": "Takimoto", "given-names": "Tatsuhiko", "affiliation": "Independent researcher"}]
     assert cff["version"] == VERSION and cff["repository-code"] == REPOSITORY and cff["license"] == "Apache-2.0"
     assert cff["authors"] == author and cff["preferred-citation"]["authors"] == author
     assert cff["preferred-citation"]["license"] == "CC-BY-4.0" and cff["preferred-citation"]["version"] == "2.1"
     zen = load(".zenodo.json")
+    assert zen["publication_date"] == PUBLICATION_DATE
     assert zen["version"] == VERSION and zen["license"] == "cc-by-4.0"
     assert zen["creators"] == [{"name": "Tatsuhiko Takimoto", "affiliation": "Independent researcher"}]
     assert any(r["identifier"] == REPOSITORY for r in zen["related_identifiers"])

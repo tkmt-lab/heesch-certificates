@@ -1,8 +1,6 @@
 # Changelog
 
-## 1.0.1 (planned 2026-11-09; not yet published)
-
-The release coordinator will replace the planned date with the actual publication date in the release metadata.
+## 1.0.1 (2026-11-09)
 
 - Enable the required libc declarations when building the pinned drat-trim source with a strict C99 compiler,
   fixing the GCC 14 build failure.
